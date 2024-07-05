@@ -1,6 +1,7 @@
 .nav-buttons{
     display: flex;
     gap: 5px;
+    overflow: scroll;
     &__button{
         padding: 5px 10px;
         display: block;

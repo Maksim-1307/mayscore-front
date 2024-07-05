@@ -3,6 +3,7 @@ import Match from "./Match";
 import { useEffect } from "react";
 
 import arrowIcon from "../images/icons/arrow.svg";
+import calenderIcon from "../images/icons/calender.png";
 
 function Scoreboard() {
 
@@ -49,7 +50,7 @@ function Scoreboard() {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('https://api.mayscor.ru/matches.php', { 
+                const response = await fetch('https://mayscor.ru/api/matches.php', { 
                     method: 'GET'
                  });
                 const textData = await response.text();
@@ -86,7 +87,7 @@ function Scoreboard() {
     */
 
     return (
-        <div class="ui-block">
+        <div class="ui-block main-section__ui-block">
             <div class="matches">
                 <div class="matches__top">
                     <div class="nav-buttons">
@@ -105,9 +106,9 @@ function Scoreboard() {
                     </div>
                     <div class="date-input">
                         <div class="button-1"> {"<"} </div>
-                        <div class="button-1">
+                        <div class="button-1 date-input__middle">
                             <label class="date-input__label" for="date-input">
-                                <img class="date-input__icon" src="images/icons/calender.png" />
+                                <img class="date-input__icon" src={calenderIcon} />
                             </label>
                             <input
                                 class="date-input__input" type="date" id="date-input"

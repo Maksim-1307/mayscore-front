@@ -3,8 +3,9 @@
     align-items: center;
     gap: 5px;
     margin-left: -1px;
+    align-items: stretch;
     .button-1{
-        height: 100%;
+        height: 30px;
         display: flex;
         align-items: center;
     }
@@ -16,9 +17,14 @@
             -webkit-appearance: none;
         }
     }
+    &__middle{
+        @media screen and (max-width: 800px) {
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
     &__icon{
         width: 16px;
         height: 16px;
     }
-    
 }

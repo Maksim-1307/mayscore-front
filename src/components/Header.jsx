@@ -3,7 +3,7 @@ function Header() {
     return (
         <header className="header">
             <div className="container">
-                <div className="header__top"><a className="logo header__logo" href="#">mayscor</a><button
+                <div className="header__top"><a className="logo header__logo" href="#">mayscor<span className="green">.ru</span></a><button
                     className="burger-button header__burger-button">
                     <div> </div>
                     <div> </div>

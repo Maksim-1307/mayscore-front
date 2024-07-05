@@ -4,10 +4,23 @@ body{
     font-weight: normal;
     font-style: normal;
     background-color: var(--body-color);
+    @media screen and (max-width: 500px) {
+        font-size: 12px;
+    }
 }
 .container{
     margin: 0 auto;
     max-width: var(--container-width);
+    @media screen and (max-width: 1050px) {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media screen and (max-width: 800px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 .main-section{
     padding: 35px 0;
@@ -20,6 +33,11 @@ body{
     .container{
         display: flex;
     }
+    &__ui-block{
+        @media screen and (max-width: 500px) {
+            max-width: calc(100%);
+        }
+    }
 }
 h1{
     font-size: 20px;
@@ -28,4 +46,7 @@ h1{
 h2{
     font-weight: 700;
     font-size: 18px;
+}
+.green{
+    color: var(--accent-color-darker);
 }
