@@ -1,0 +1,24 @@
+.league{
+    .nav-list__point--current {
+        font-weight: 700;
+    }
+    &__image{
+        height: 100px;
+        width: 100px;
+        border-radius: 8px;
+    }
+    &__middle{
+        padding: 30px 0 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &-ui-block{
+        padding-bottom: 10px;
+    }
+}

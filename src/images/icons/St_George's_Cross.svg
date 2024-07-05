@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="254">
+  <path d="M0 0h400v254h-400z" fill="#fff"/>
+  <path d="M200 0v254M0 127h400" stroke="#fc241c" stroke-width="41"/>
+</svg>

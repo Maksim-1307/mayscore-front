@@ -1,0 +1,49 @@
+.matches{
+    .closing-list__button{
+        display: flex;
+        align-items: center;
+    }
+    &__top {
+        margin-bottom: 15px;
+    }
+    &__league{
+        //margin-top: 5px;
+        background-color: var(--accent-color-light);
+        padding: 10px 8px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon{
+        width: 25px;
+        height: 17px;
+        margin-right: 5px;
+    }
+    &__country{
+        text-transform: uppercase;
+        margin-right: 3px;
+    }
+    &__league-name {
+        font-weight: 700;
+    }
+    &__league-title{
+        display: flex;
+        align-items: center;
+    }
+    &__tour{
+        margin-top: 5px;
+        background-color: rgba(0,0,0,.05);
+        padding: 8px 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 5px;
+        span {
+            opacity: .6;
+        }
+    }
+}

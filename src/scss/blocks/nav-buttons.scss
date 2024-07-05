@@ -1,0 +1,19 @@
+.nav-buttons{
+    display: flex;
+    gap: 5px;
+    &__button{
+        padding: 5px 10px;
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: var(--ui-color);
+        border-radius: 5px;
+        &--current{
+            background-color: var(--accent-color);
+        }
+        &--active{
+            background-color: var(--accent-color) !important;
+            color: var(--text-color);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.button-1{
+    padding: 5px 10px;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--ui-color);
+    border-radius: 5px;
+    display: inline-block;
+
+    &--current {
+        background-color: var(--accent-color);
+    }
+}

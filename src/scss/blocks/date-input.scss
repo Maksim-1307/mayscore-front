@@ -1,0 +1,24 @@
+.date-input{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: -1px;
+    .button-1{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__input{
+        font-weight: 700;
+        max-width: 75px;
+        &::-webkit-inner-spin-button, &::-webkit-calendar-picker-indicator{
+            display: none;
+            -webkit-appearance: none;
+        }
+    }
+    &__icon{
+        width: 16px;
+        height: 16px;
+    }
+    
+}

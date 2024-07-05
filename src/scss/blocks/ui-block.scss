@@ -1,0 +1,8 @@
+.ui-block{
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+    & + &{
+        margin-top: 10px;
+    }
+}

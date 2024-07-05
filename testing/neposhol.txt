@@ -1,0 +1,57 @@
+["YL2opDcm"]=>
+  array(27) {
+    ["AD"]=>
+    string(10) "1720198800"
+    ["ADE"]=>
+    string(10) "1720198800"
+    ["AB"]=>
+    string(1) "1"
+    ["CR"]=>
+    string(1) "1"
+    ["AC"]=>
+    string(1) "1"
+    ["CX"]=>
+    string(6) "РФШ"
+    ["RW"]=>
+    string(1) "0"
+    ["AX"]=>
+    string(1) "0"
+    ["BX"]=>
+    string(2) "-1"
+    ["WL"]=>
+    string(0) ""
+    ["WQ"]=>
+    string(0) ""
+    ["WM"]=>
+    string(6) "РФШ"
+    ["AE"]=>
+    string(6) "РФШ"
+    ["FH"]=>
+    string(6) "РФШ"
+    ["JA"]=>
+    string(8) "nqrfP60g"
+    ["GRA"]=>
+    string(1) "0"
+    ["OA"]=>
+    string(21) "YVWzOf7k-Uye1gatQ.png"
+    ["WN"]=>
+    string(6) "ЕЛГ"
+    ["AF"]=>
+    string(12) "Елгава"
+    ["FK"]=>
+    string(12) "Елгава"
+    ["JB"]=>
+    string(8) "0nnbOQFa"
+    ["GRB"]=>
+    string(1) "0"
+    ["OB"]=>
+    string(21) "hSoYtIRq-finrn2xp.png"
+    ["AL"]=>
+    string(449) "{"2":[{"BU":"\/bookmaker\/16\/?from=live-streaming&sport=1","IU":"https:\/\/static.flashscore.com\/res\/image\/data\/bookmakers\/17-16.png","BN":"bet365","BI":16,"BT":"GEO restrictions apply. Funded account required or to have placed a bet in the last 24 hours. GamblingTherapy.org. 18+"},{"BU":"\/bookmaker\/49\/?from=live-streaming&sport=1","IU":"https:\/\/static.flashscore.com\/res\/image\/data\/bookmakers\/17-49.png","BN":"Tipsport","BI":49}]}"
+    ["AW"]=>
+    string(1) "1"
+    ["AN"]=>
+    string(1) "n"
+    ["MW"]=>
+    string(13) "723|454|16|49"
+  }

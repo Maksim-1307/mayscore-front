@@ -1,0 +1,67 @@
+["2L2PQv5I"]=>
+  array(32) {
+    ["AD"]=>
+    string(10) "1720188000"
+    ["ADE"]=>
+    string(10) "1720188000"
+    ["AB"]=>
+    string(1) "2"
+    ["CR"]=>
+    string(1) "2"
+    ["AC"]=>
+    string(2) "38"
+    ["CX"]=>
+    string(33) "Шахтер Солигорск 2"
+    ["RW"]=>
+    string(1) "0"
+    ["AI"]=>
+    string(1) "y"
+    ["AX"]=>
+    string(1) "1"
+    ["AO"]=>
+    string(10) "1720190848"
+    ["BX"]=>
+    string(2) "-1"
+    ["WL"]=>
+    string(0) ""
+    ["WQ"]=>
+    string(0) ""
+    ["WM"]=>
+    string(6) "ШАХ"
+    ["AE"]=>
+    string(33) "Шахтер Солигорск 2"
+    ["FH"]=>
+    string(33) "Шахтер Солигорск 2"
+    ["JA"]=>
+    string(8) "zyycGjTM"
+    ["GRA"]=>
+    string(1) "0"
+    ["AG"]=>
+    string(1) "1"
+    ["AT"]=>
+    string(1) "1"
+    ["OA"]=>
+    string(21) "zDVIYQne-x28DBGvr.png"
+    ["WN"]=>
+    string(6) "ВОЛ"
+    ["AF"]=>
+    string(21) "Волна-Пинск"
+    ["FK"]=>
+    string(21) "Волна-Пинск"
+    ["JB"]=>
+    string(8) "nBv1FArT"
+    ["GRB"]=>
+    string(1) "0"
+    ["AH"]=>
+    string(1) "1"
+    ["AU"]=>
+    string(1) "1"
+    ["OB"]=>
+    string(21) "SnSqDtgT-dxvSmy33.png"
+    ["AL"]=>
+    string(222) "{"2":[{"BU":"\/bookmaker\/471\/?from=live-streaming&sport=1","IU":"https:\/\/static.flashscore.com\/res\/image\/data\/bookmakers\/17-471.png","BN":"1xBet.kz","BI":471}],"HP":[{"HPI":1,"HPN":"YouTube","HPR":"1720187869|"}]}"
+    ["AN"]=>
+    string(1) "y"
+    ["MW"]=>
+    string(7) "471|723"
+  }

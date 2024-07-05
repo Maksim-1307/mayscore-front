@@ -1,0 +1,31 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    background-color: var(--body-color);
+}
+.container{
+    margin: 0 auto;
+    max-width: var(--container-width);
+}
+.main-section{
+    padding: 35px 0;
+    .sidebar{
+        flex: 1;
+    }
+    .content{
+        flex: 3;
+    }
+    .container{
+        display: flex;
+    }
+}
+h1{
+    font-size: 20px;
+    font-weight: 800;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+}
