@@ -18,7 +18,7 @@ function Scoreboard() {
                     <div class="matches__league-title">
                             <img class="matches__icon" src={leagueData[0].icon} />
                             <span class="matches__country">{leagueData[0].country}:</span>
-                        <span class="matches__league-name">{leagueData[0].name}</span>
+                        <a href={leagueData[0]["url"]} class="matches__league-name">{leagueData[0].name}</a>
                     </div>
                     <button class="closing-list__button"><img src={arrowIcon} /></button>
                 </div>
