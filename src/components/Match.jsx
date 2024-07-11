@@ -9,6 +9,28 @@ function Match(props) {
     }
 
     const status = () => {
+        const statusTranslations = {
+            "1": "&nbsp;",
+            "45": "Будет доигран позже",
+            "42": "Ждем...",
+            "2": "Live",
+            "12": "1-й тайм",
+            "13": "2-й тайм",
+            "6": "Дополнительное время",
+            "7": "Серия пенальти",
+            "38": "Перерыв",
+            "46": "Перерыв",
+            "3": "Завершен",
+            "10": "После дополнительного времени",
+            "11": "После серии пенальти",
+            "9": "Неявка",
+            "43": "Задержка",
+            "36": "Прерван",
+            "4": "Перенесен",
+            "5": "Отменен",
+            "37": "Прерван",
+            "54": "Тех. поражение"
+        };
         if (data.status == 1) {
             const timestamp = data.time;
             let date = new Date(timestamp * 1000);
@@ -17,13 +39,11 @@ function Match(props) {
             let formattedTime = hours + ':' + minutes.substr(-2);
             return formattedTime;
         }
-        if (data.status == 2) return ("live");
-        if (data.status == 3) return ("Завершен");
-        return data.status;
+        return statusTranslations[data.status];
     }
 
     const score = () => {
-        if (data.status == 1){
+        if (data.status == 1 || data.status == 4){
             return (
             <>
             <div>-</div>

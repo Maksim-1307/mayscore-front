@@ -5,9 +5,9 @@ import { useEffect } from "react";
 import arrowIcon from "../images/icons/arrow.svg";
 import calenderIcon from "../images/icons/calender.png";
 
-function Scoreboard() {
+function Scoreboard(props) {
 
-    const [data, setData] = useState(null);
+    const data = props.data;
     const [isLoading, setLoading] = useState(true);
 
     function renderMatches(data) {
@@ -46,45 +46,8 @@ function Scoreboard() {
         return content
     }
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setLoading(true);
-            try {
-                const response = await fetch('https://mayscor.ru/api/matches.php', { 
-                    method: 'GET'
-                 });
-                const textData = await response.text();
-                const jsonData = JSON.parse(textData);
-                setData(jsonData);
-            } catch (error) {
-                console.error('Ошибка загрузки данных:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-
-        const intervalId = setInterval(fetchData, 60000); // Обновление данных каждую минуту
-
-        return () => clearInterval(intervalId); // Очистка интервала при размонтировании компонента
-
-    }, []);
-
     if (isLoading && !data) return (<div class="ui-block">Загрузка данных</div>);
     if (!data) return ("Ошибка");
-
-    /*
-    useEffect(() => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://your-website.com'); // Замените на ваш домен
-     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-  }, []);
-
-
-
-    */
 
     return (
         <div class="ui-block main-section__ui-block">
