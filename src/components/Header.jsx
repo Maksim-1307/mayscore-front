@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import footballIcon from "../images/icons/soccer.png";
 import hockeyIcon from "../images/icons/hokey.png";
@@ -37,11 +37,11 @@ function Header() {
         let elements = [];
         for (const [key, value] of Object.entries(navlist)) {
             elements.push((
-                <a href={"/"+key} className="nav-list__point nav-list__point--current">
+                <Link to={"/"+key} className="nav-list__point nav-list__point--current">
                     <img className="nav-list__icon" src={navicons[key]} />
                     <span className="nav-list__text">{value}</span>
                     <div className="nav-list__line" style={{"opacity": isCurrent(key)}}></div>
-                </a>
+                </Link>
             ));
         }
         return elements;

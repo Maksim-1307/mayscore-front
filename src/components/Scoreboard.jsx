@@ -8,11 +8,10 @@ import calenderIcon from "../images/icons/calender.png";
 function Scoreboard(props) {
 
     const data = props.data;
-    const [isLoading, setLoading] = useState(true);
 
     function renderMatches(data) {
         function renderLeague(leagueData){
-            if (leagueData[0]) return (
+        if (leagueData[0]) return (
             <div class="closing-list matches__closing-list">
                 <div class="closing-list__top matches__league">
                     <div class="matches__league-title">
@@ -43,10 +42,11 @@ function Scoreboard(props) {
             leagueData.push(block);
 
         });
+        content.push(renderLeague(leagueData));
         return content
     }
 
-    if (isLoading && !data) return (<div class="ui-block">Загрузка данных</div>);
+    if (!data) return (<div class="ui-block">Загрузка данных</div>);
     if (!data) return ("Ошибка");
 
     return (
