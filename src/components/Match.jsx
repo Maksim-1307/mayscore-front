@@ -1,85 +1,164 @@
-function Match(props) {
-    const data = props.data;
-    if (!data) return;
-    if (data.blockType != "match") return;
+import { useParams } from "react-router-dom";
+import Breadcrumbs from "./Breadcrumbs";
+import Sidebar from "./Sidebar";
+import { useState, useEffect } from "react";
+import { statusTranslations } from "../helpers/translations";
 
-    const classname = () => {
-        if (data.status == 2) return "match match--live";
-        return "match";
-    }
+function Match(){
+    const {matchid} = useParams();
+
+    const [data, setData] = useState(null);
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const time = 60000;
+        const urlData = {
+            id: matchid,
+        };
+        const urlParams = new URLSearchParams(urlData).toString();
+        const url = 'https://mayscor.ru/api/match.php?' + urlParams;
+
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                });
+                const textData = await response.text();
+                const jsonData = JSON.parse(textData);
+                setData(jsonData);
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+
+        const intervalId = setInterval(fetchData, time);
+
+        return () => clearInterval(intervalId);
+
+    }, []);
 
     const status = () => {
-        const statusTranslations = {
-            "1": "&nbsp;",
-            "45": "Будет доигран позже",
-            "42": "Ждем...",
-            "2": "Live",
-            "12": "1-й тайм",
-            "13": "2-й тайм",
-            "6": "Дополнительное время",
-            "7": "Серия пенальти",
-            "38": "Перерыв",
-            "46": "Перерыв",
-            "3": "Завершен",
-            "10": "После дополнительного времени",
-            "11": "После серии пенальти",
-            "9": "Неявка",
-            "43": "Задержка",
-            "36": "Прерван",
-            "4": "Перенесен",
-            "5": "Отменен",
-            "37": "Прерван",
-            "54": "Тех. поражение"
-        };
-        if (data.status == 1) {
-            const timestamp = data.time;
-            let date = new Date(timestamp * 1000);
-            let hours = date.getHours();
-            let minutes = "0" + date.getMinutes();
-            let formattedTime = hours + ':' + minutes.substr(-2);
-            return formattedTime;
+
+        if (!data) return;
+        switch (data.maindata[0].status) {
+            case "1": return null; 
         }
-        return statusTranslations[data.status];
+        return statusTranslations[data.maindata[0].status];
+    }
+
+    const time = () => {
+        if (!data) return;
+        switch (data.maindata[0].status){
+            case "1": {
+                const timestamp = data.maindata[0].start_time;
+                const date = new Date(timestamp * 1000);
+                const day = date.getDate();
+                const month = date.getMonth() + 1;
+                const yeahr = date.getFullYear();
+                const hours = date.getHours();
+                const minutes = "0" + date.getMinutes();
+                const formattedTime = `${day}.${month}.${yeahr} ${hours}:${minutes.substr(-2)}`;
+                return formattedTime;
+            }
+            case "3": {
+                const timestamp = data.maindata[0].end_time;
+                let date = new Date(timestamp * 1000);
+                let day = date.getDate();
+                let month = date.getMonth()+1;
+                let yeahr = date.getFullYear();
+                let hours = date.getHours();
+                let minutes = "0" + date.getMinutes();
+                let formattedTime = `${day}.${month}.${yeahr} ${hours}:${minutes.substr(-2)}`;
+                return formattedTime;
+            }
+            
+        }
     }
 
     const score = () => {
-        if (data.status == 1 || data.status == 4){
-            return (
-            <>
-            <div>-</div>
-            <div>-</div>
-            </>
-            );
+        if (!data) return;
+        switch (data.maindata[0].status) {
+            case "1":
+                return (<div className="game__score">vs</div>); 
+            case "2":
+            case "3":
+                return (
+                <div className="game__score">
+                    <span>{data.maindata[0].commandA_score}</span>
+                    <span> - </span>
+                    <span>{data.maindata[0].commandB_score}</span>
+                </div>);
         }
-        return (
-        <>
-            <div>{data.commandA_score}</div>
-            <div>{data.commandB_score}</div>
-        </>);
     }
 
-    return(
-        <a class={classname()} href="">
-            <div class="match__left">
-                <div class="match__status">{status()}</div>
-                <div class="match__players">
-                    <div class="match-player">
-                        <img class="match-player__icon"
-                            src={data.commandA_icon} />
-                        <span>{data.commandA_name}</span>
-                    </div>
-                    <div class="match-player">
-                        <img class="match-player__icon"
-                            src={data.commandB_icon} />
-                        <span>{data.commandB_name}</span>
+    // useEffect(()=>{
+    //     if (data.maindata) console.log(data.maindata[0]);
+    // }, [data]);
+
+    if (!data) return;
+
+    return (<section class="main-section">
+        <div className='container'>
+            <Sidebar />
+            <div className="content">
+                <div class="ui-block game-ui-block">
+                    <div class="game">
+                        <div class="game__top">
+                            <Breadcrumbs />
+                        </div>
+                        <div class="game__middle">
+                            <div className="game__command">
+                                <div className="game__icon">
+                                    <img src={data.htmldata.participantsData.home[0].image_path} alt="" />
+                                </div>
+                                <div className="game__command-name">
+                                    {data.htmldata.participantsData.home[0].name}
+                                </div>
+                            </div>
+                            <div className="game__info">
+                                <div className="game__status">{status()}</div>
+                                { score() }
+                                <div className="game__time">{ time() }</div>
+                            </div>
+                            <div className="game__command">
+                                <div className="game__icon">
+                                    <img src={data.htmldata.participantsData.away[0].image_path} alt="" />
+                                </div>
+                                <div className="game__command-name">
+                                    {data.htmldata.participantsData.away[0].name}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game__bottom">
+                            <div class="nav-list league__nav-list">
+                                <button class="nav-list__point nav-list__point--current">
+                                    <span class="nav-list__text">матч</span>
+                                    <div class="nav-list__line"></div>
+                                </button>
+                                <button class="nav-list__point">
+                                    <span class="nav-list__text">коэфф.</span>
+                                    <div class="nav-list__line"></div>
+                                </button>
+                                <button class="nav-list__point">
+                                    <span class="nav-list__text">h2h</span>
+                                    <div class="nav-list__line"></div>
+                                </button>
+                                <button class="nav-list__point">
+                                    <span class="nav-list__text">таблица</span>
+                                    <div class="nav-list__line"></div>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="match__score">
-                {score()}
-            </div>
-        </a>
-    );
+        </div>
+    </section>);
 }
 
 export default Match;

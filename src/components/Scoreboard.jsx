@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Match from "./Match";
+import MatchCard from "./MatchCard";
 import { useEffect } from "react";
 
 import arrowIcon from "../images/icons/arrow.svg";
@@ -24,7 +24,7 @@ function Scoreboard(props) {
                 <div class="closing-list__body"> 
                     {leagueData.map((block) => {
                         return(<>
-                        <Match data={block} />
+                        <MatchCard data={block} />
                         <div class="match-delmiter"></div>
                         </>)
                     })}                        

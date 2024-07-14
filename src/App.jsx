@@ -9,6 +9,7 @@ import Sport from './components/Sport.jsx';
 import Country from './components/Country.jsx';
 import League from './components/League.jsx';
 import Game from './components/Game.jsx';
+import Match from './components/Match.jsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/:sport/:country" Component={Country} />
         <Route path="/:sport/:country/:league" Component={League} />
         <Route path="/:sport/:country/:league/:match" Component={Game} />
+        <Route path="/match/:matchid" Component={Match} />
       </Routes>
     </BrowserRouter>
   );
