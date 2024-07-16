@@ -8,6 +8,9 @@ body{
         font-size: 12px;
     }
 }
+button, input {
+    color: var(--font-color);
+}
 .container{
     margin: 0 auto;
     max-width: var(--container-width);

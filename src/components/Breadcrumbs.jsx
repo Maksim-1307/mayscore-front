@@ -26,6 +26,23 @@ function Breadcrumbs (props) {
         "esports": esportsIcon,
     }
 
+    const Wrapper = (props) => {
+        const {children, ...rest} = props; 
+        if (data) {
+            return (
+                <div {...rest}>
+                    {children}
+                </div>
+            );
+        } else {
+            return (
+                <a href={path} {...rest}>
+                    {children}
+                </a>
+            );
+        }
+    }
+
     let path = "";
     let pathElements = [];
     pathData.forEach((element) => {
@@ -42,17 +59,18 @@ function Breadcrumbs (props) {
                 return (<span class="pagination__text">{element}</span>);
             }
             pathElements.push(
-                <a href={path} class="pagination__point pagination__point--parent">
+                <Wrapper class="pagination__point pagination__point--parent">
                     {icon()}
                     {span()}
-                </a>
+                </Wrapper>
             );
         } else {
             pathElements.push(
-            <><div class="pagination__delmiter">{">"}</div>
-            <a href = {path} class="pagination__point">
+            <>
+            <div class="pagination__delmiter">{">"}</div>
+            <Wrapper href = {path} class="pagination__point">
                 <span class="pagination__text">{element}</span>
-            </a>
+            </Wrapper>
             </>);
         }
     });

@@ -11,5 +11,8 @@
         width: 100%;
         justify-content: safe center;
         background: linear-gradient(90deg, #FFF 0%, var(--ui-color-light) 50%, #FFF 100%);
+        @media screen and (max-width: 800px) {
+            justify-content: flex-start;
+        }
     }
 }
