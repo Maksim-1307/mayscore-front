@@ -9,7 +9,7 @@
     }
     &__nav-list{
         width: 100%;
-        justify-content: center;
+        justify-content: safe center;
         background: linear-gradient(90deg, #FFF 0%, var(--ui-color-light) 50%, #FFF 100%);
     }
 }

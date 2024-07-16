@@ -96,6 +96,12 @@ function Match(){
         }
     }
 
+    const breadcrumbsData = () => {
+        if (!data) return; 
+        let bcData = [data.htmldata.header.tournament.category, data.htmldata.header.tournament.tournament];
+        return bcData;
+    }
+
     // useEffect(()=>{
     //     if (data.maindata) console.log(data.maindata[0]);
     // }, [data]);
@@ -104,12 +110,11 @@ function Match(){
 
     return (<section class="main-section">
         <div className='container'>
-            <Sidebar />
             <div className="content">
                 <div class="ui-block game-ui-block">
                     <div class="game">
                         <div class="game__top">
-                            <Breadcrumbs />
+                            <Breadcrumbs data={breadcrumbsData()}/>
                         </div>
                         <div class="game__middle">
                             <div className="game__command">

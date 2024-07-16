@@ -12,7 +12,10 @@ import { sportsTranslations } from "../helpers/translations";
 
 function Breadcrumbs (props) {
     const location = useLocation();
-    const pathData = location.pathname.split("/");
+    let pathData = location.pathname.split("/");
+
+    const data = props.data;
+    if (data) pathData = data;
 
     const navicons = {
         "football": footballIcon,
@@ -29,10 +32,19 @@ function Breadcrumbs (props) {
         if (!element) return;
         path += "/" + element;
         if (!pathElements.length){
+            const icon = () => { 
+                const iconpath = navicons[element]
+                if (iconpath) return (<img class="pagination__icon" src={iconpath} />);
+            };
+            const span = () => {
+                const name = sportsTranslations[element];
+                if (name) return (<span class="pagination__text">{name}</span>);
+                return (<span class="pagination__text">{element}</span>);
+            }
             pathElements.push(
                 <a href={path} class="pagination__point pagination__point--parent">
-                    <img class="pagination__icon" src={navicons[element]}/>
-                    <span class="pagination__text">{sportsTranslations[element]}</span>
+                    {icon()}
+                    {span()}
                 </a>
             );
         } else {
