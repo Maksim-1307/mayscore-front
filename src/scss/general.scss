@@ -35,11 +35,15 @@ button, input {
     }
     .container{
         display: flex;
+        gap: 10px;
     }
     &__ui-block{
         @media screen and (max-width: 500px) {
             max-width: calc(100%);
         }
+    }
+    @media screen and (max-width: 500px) {
+        padding: 15px 0;
     }
 }
 h1{

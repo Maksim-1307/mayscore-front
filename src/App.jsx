@@ -1,6 +1,6 @@
 import './scss/style.scss';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "./components/Header.jsx";
 import Sidebar from './components/Sidebar.jsx';
 import Scoreboard from './components/Scoreboard.jsx';

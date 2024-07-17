@@ -49,7 +49,7 @@ function Sport (props) {
     return(
         <section class="main-section">
             <div className='container'>
-                <Sidebar />
+                <Sidebar data={data}/>
                 <div className="content">
                     <Scoreboard data={data}/>
                 </div>

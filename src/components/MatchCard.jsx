@@ -4,10 +4,6 @@ import { statusTranslations } from "../helpers/translations";
 function MatchCard(props) {
     const data = props.data;
 
-    useEffect(() => {
-        console.log(props.data);
-    }, [props.data]);
-
     if (!data) return;
     if (data.blockType != "match") return;
 

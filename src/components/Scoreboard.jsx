@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MatchCard from "./MatchCard";
 import { useEffect } from "react";
+import "../scripts/closing-list.js";
 
 import arrowIcon from "../images/icons/arrow.svg";
 import calenderIcon from "../images/icons/calender.png";

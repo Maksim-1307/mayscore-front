@@ -56,7 +56,7 @@ function League(props) {
     return (
         <section class="main-section">
             <div className='container'>
-                <Sidebar />
+                <Sidebar data={data}/>
                 <div className="content">
                     <div class="ui-block league-ui-block">
                         <div class="league">
