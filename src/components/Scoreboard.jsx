@@ -5,6 +5,7 @@ import "../scripts/closing-list.js";
 
 import arrowIcon from "../images/icons/arrow.svg";
 import calenderIcon from "../images/icons/calender.png";
+import { ClosingList, ClosingListBody, ClosingListButton } from "./ClosingList.jsx";
 
 function Scoreboard(props) {
 
@@ -13,24 +14,26 @@ function Scoreboard(props) {
     function renderMatches(data) {
         function renderLeague(leagueData){
         if (leagueData[0]) return (
-            <div class="closing-list matches__closing-list">
+            <ClosingList className="matches__closing-list">
                 <div class="closing-list__top matches__league">
                     <div class="matches__league-title">
                             <img class="matches__icon" src={leagueData[0].icon} />
                             <span class="matches__country">{leagueData[0].country}:</span>
                         <a href={leagueData[0]["url"]} class="matches__league-name">{leagueData[0].name}</a>
                     </div>
-                    <button class="closing-list__button"><img src={arrowIcon} /></button>
+                    <ClosingListButton>
+                        <img src={arrowIcon} />
+                    </ClosingListButton>
                 </div>
-                <div class="closing-list__body"> 
+                <ClosingListBody>
                     {leagueData.map((block) => {
-                        return(<>
-                        <MatchCard data={block} />
-                        <div class="match-delmiter"></div>
+                        return (<>
+                            <MatchCard data={block} />
+                            <div class="match-delmiter"></div>
                         </>)
-                    })}                        
-                </div>
-            </div>
+                    })}    
+                </ClosingListBody>
+            </ClosingList>
             );
         }
         let content = [];
