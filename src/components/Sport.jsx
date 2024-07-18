@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import Scoreboard from "./Scoreboard";
+import {Scoreboard, ScoreboardProvider, useScoreboard} from "./Scoreboard";
 import { useLocation, useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import League from "./League";
@@ -14,10 +14,13 @@ function Sport (props) {
     const [data, setData] = useState(null);
     const [isLoading, setLoading] = useState(true);
 
+    const { date, setDate } = useScoreboard();
+
     useEffect(() => {
         const time = 60000;
         const urlData = {
-            sport: sport
+            sport: sport,
+            date: date
         };
         const urlParams = new URLSearchParams(urlData).toString();
         const url = 'https://mayscor.ru/api/matches.php?' + urlParams;
@@ -44,7 +47,7 @@ function Sport (props) {
 
         return () => clearInterval(intervalId); 
 
-    }, []);
+    }, [date]);
 
     return(
         <section class="main-section">

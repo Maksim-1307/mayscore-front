@@ -1,4 +1,7 @@
 .closing-list{
+    &__button{
+        transition: .5s;
+    }
     &__body{
         padding: 5px 5px;
     }

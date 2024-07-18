@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import Scoreboard from "./Scoreboard";
+import {Scoreboard} from "./Scoreboard";
 import { useLocation, useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from "react";

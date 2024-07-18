@@ -10,11 +10,13 @@ import Country from './components/Country.jsx';
 import League from './components/League.jsx';
 import Game from './components/Game.jsx';
 import Match from './components/Match.jsx';
+import { ScoreboardProvider } from './components/Scoreboard.jsx';
 
 
 function App() {
 
   return (
+    <ScoreboardProvider>
     <BrowserRouter>
       <Header />
       <Routes>
@@ -26,6 +28,7 @@ function App() {
         <Route path="/match/:matchid" Component={Match} />
       </Routes>
     </BrowserRouter>
+    </ScoreboardProvider>
   );
 }
 

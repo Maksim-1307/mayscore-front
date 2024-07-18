@@ -40,10 +40,15 @@ const ClosingList = ({ children }) => {
 };
 
 const ClosingListButton = ({ children }) => {
-    const { toggleVisibility } = useClosingList();
+    const { isHidden, toggleVisibility } = useClosingList();
+
+    const rotation = () => {
+        if (isHidden) return {"transform": "rotate(0deg)"};
+        return { "transform": "rotate(180deg)" };
+    }
 
     return (
-        <button className="closing-list__button" onClick={toggleVisibility}> 
+        <button className="closing-list__button" style={rotation()} onClick={toggleVisibility}> 
             {children} 
         </button>
     );

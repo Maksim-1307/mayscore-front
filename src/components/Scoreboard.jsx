@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, createContext, useContext } from "react";
 import MatchCard from "./MatchCard";
 import { useEffect } from "react";
 import "../scripts/closing-list.js";
 
 import arrowIcon from "../images/icons/arrow.svg";
-import calenderIcon from "../images/icons/calender.png";
 import { ClosingList, ClosingListBody, ClosingListButton } from "./ClosingList.jsx";
+import DateInput from "./DateInput.jsx";
 
 function Scoreboard(props) {
 
@@ -71,18 +71,7 @@ function Scoreboard(props) {
                             class="button-1 nav-buttons__button">завершенные
                         </button>
                     </div>
-                    <div class="date-input">
-                        <div class="button-1"> {"<"} </div>
-                        <div class="button-1 date-input__middle">
-                            <label class="date-input__label" for="date-input">
-                                <img class="date-input__icon" src={calenderIcon} />
-                            </label>
-                            <input
-                                class="date-input__input" type="date" id="date-input"
-                                name="date-input" value="2024-06-27" />
-                        </div>
-                        <div class="button-1">{">"}</div>
-                    </div>
+                    <DateInput/>
                 </div>
                 <div class="matches__body">
                     {renderMatches(data)} 
@@ -92,4 +81,24 @@ function Scoreboard(props) {
     );
 }
 
-export default Scoreboard;
+const ScoreboardContext = createContext();
+
+const useScoreboard = () => {
+    return useContext(ScoreboardContext);
+};
+
+const ScoreboardProvider = ({ children }) => {
+
+    const [date, setDate] = useState(0);
+    const [filter, setFilter] = useState('all');
+
+    return (
+        <ScoreboardContext.Provider value={{ date, setDate, filter, setFilter }}>
+            {children}
+        </ScoreboardContext.Provider>
+    );
+};
+
+export { Scoreboard, ScoreboardProvider, useScoreboard };
+
+
