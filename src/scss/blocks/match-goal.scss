@@ -1,0 +1,30 @@
+.match-event{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &__time{
+        font-weight: 700;
+        opacity: .6;
+    }
+    &__score{
+        font-weight: 700;
+        display: inline-block;
+        padding: 5px;
+        border: 2px solid var(--ui-color);
+        border-radius: 8px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        span{
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+    &__name-major{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    &__name-minor {
+        font-size: 10px;
+    }
+}

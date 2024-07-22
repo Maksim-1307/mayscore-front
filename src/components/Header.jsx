@@ -6,6 +6,7 @@ import basketballIcon from "../images/icons/basketball.png";
 import volleyballIcon from "../images/icons/voleyball.png";
 import tennisIcon from "../images/icons/tennis.png";
 import esportsIcon from "../images/icons/cybersport.png";
+import MenuButton from "./MenuButton";
 
 function Header() {
 
@@ -50,12 +51,9 @@ function Header() {
     return (
         <header className="header">
             <div className="container">
-                <div className="header__top"><a className="logo header__logo" href="/">mayscor<span className="green">.ru</span></a><button
-                    className="burger-button header__burger-button">
-                    <div> </div>
-                    <div> </div>
-                    <div> </div>
-                </button></div>
+                <div className="header__top"><a className="logo header__logo" href="/">mayscor<span className="green">.ru</span></a>
+                <MenuButton className="header__burger-button"/>
+                </div>
                 <div className="header__bottom">
                     <div className="nav-list header__nav-list">
                         {navListElemens()}

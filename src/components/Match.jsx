@@ -3,6 +3,8 @@ import Breadcrumbs from "./Breadcrumbs";
 import Sidebar from "./Sidebar";
 import { useState, useEffect } from "react";
 import { statusTranslations } from "../helpers/translations";
+import MatchInfo from "./MatchInfo";
+import MatchProgress from "./MatchProgress";
 
 function Match(){
     const {matchid} = useParams();
@@ -160,6 +162,9 @@ function Match(){
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="ui-block">
+                    <MatchProgress />
                 </div>
             </div>
         </div>

@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
+    transition: .5s;
+    transform: translateX(0%);
     &__point{
         display: flex;
         gap: 10px;
@@ -35,7 +37,21 @@
             top:1px;
         }
     }
+
+    &--active{
+        transform: translateX(-15px) !important;
+    }
+
     @media screen and (max-width: 800px) {
-        display: none;
+        position: absolute;
+        top: 0px;
+        transform: translateX(calc(-100% - 15px));
+        background-color: white;
+        padding: 25px 15px;
+        min-width: 100px;
+        z-index: 10;
+        height: 100%;
+        max-width: 100vw;
+        overflow-y: scroll;
     }
 }

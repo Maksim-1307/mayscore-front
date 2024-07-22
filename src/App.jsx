@@ -11,24 +11,27 @@ import League from './components/League.jsx';
 import Game from './components/Game.jsx';
 import Match from './components/Match.jsx';
 import { ScoreboardProvider } from './components/Scoreboard.jsx';
+import { AppContextProvider } from './AppContext.jsx';
 
 
 function App() {
 
   return (
-    <ScoreboardProvider>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" Component={Sport} />
-        <Route path="/:sport" Component={Sport} />
-        <Route path="/:sport/:country" Component={Country} />
-        <Route path="/:sport/:country/:league" Component={League} />
-        <Route path="/:sport/:country/:league/:match" Component={Game} />
-        <Route path="/match/:matchid" Component={Match} />
-      </Routes>
-    </BrowserRouter>
-    </ScoreboardProvider>
+    <AppContextProvider>
+      <ScoreboardProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" Component={Sport} />
+            <Route path="/:sport" Component={Sport} />
+            <Route path="/:sport/:country" Component={Country} />
+            <Route path="/:sport/:country/:league" Component={League} />
+            <Route path="/:sport/:country/:league/:match" Component={Game} />
+            <Route path="/match/:matchid" Component={Match} />
+          </Routes>
+        </BrowserRouter>
+      </ScoreboardProvider>
+    </AppContextProvider>
   );
 }
 

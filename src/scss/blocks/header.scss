@@ -15,4 +15,9 @@
             justify-content: flex-start;
         }
     }
+    &__burger-button{
+        @media screen and (min-width: 801px) {
+            display: none !important; 
+        }
+    }
 }
