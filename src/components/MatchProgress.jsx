@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
+
 import yellowcard from '../images/icons/yellow-card.png';
 import redcard from '../images/icons/red-card.png';
+import substitution from '../images/icons/substitution.png';
 
 function check_undefined(...props){
     if (!Array.isArray(props)) return false;
@@ -118,11 +120,43 @@ const Redcard = (data) => {
     );
 }
 
+const Substitution = (data) => {
+    if (!data) return;
+    if (data["IE_0"] != "6") return;
+
+    const time = data["IB_0"];
+    const leaving = data["IF_0"];
+    const coming = data["IF_1"];
+    const command = data["IA_0"];
+
+    if (!check_undefined(time, leaving, coming, command)) return;
+
+    const getClass = () => {
+        if (command == 1) return "match-event";
+        return "match-event match-event--right";
+    }
+
+    return (
+        <div className={getClass()}>
+            <div className="match-event__time">
+                {time}
+            </div>
+            <div className="match-event__score">
+                <img src={substitution} alt="" className="match-event__icon" />
+            </div>
+            <div className="match-event__name-major">{coming}</div>
+            <div className="match-event__name-minor">{leaving}</div>
+        </div>
+
+    );
+}
+
 const matchEvents = {
     "0": Time,
     "1": Yellowcard,
     "2": Redcard,
-    "3": Goal
+    "3": Goal,
+    "6": Substitution
 }
 
 function MatchProgress () {
