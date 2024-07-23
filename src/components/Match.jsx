@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { statusTranslations } from "../helpers/translations";
 import MatchInfo from "./MatchInfo";
 import MatchProgress from "./MatchProgress";
+import MatchStatistic from "./MatchStatistic";
 
 function Match(){
     const {matchid} = useParams();
@@ -165,6 +166,7 @@ function Match(){
                 </div>
                 <div class="ui-block">
                     <MatchProgress />
+                    <MatchStatistic />
                 </div>
             </div>
         </div>

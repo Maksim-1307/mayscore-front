@@ -62,7 +62,6 @@ const Goal = (data) => {
 }
 
 const Yellowcard = (data) => {
-    console.log("yellow card");
     if (!data) return;
     if (data["IE_0"] != "1") return; 
 
@@ -196,10 +195,6 @@ function MatchProgress () {
         return () => clearInterval(intervalId);
 
     }, []);
-
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
 
     const events = () => {
         let events = [];
