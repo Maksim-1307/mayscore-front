@@ -1,0 +1,11 @@
+.match-statisctic{
+    &__title{
+        margin-bottom: 15px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 8px;
+    }
+}

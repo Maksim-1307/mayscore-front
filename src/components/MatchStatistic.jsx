@@ -1,6 +1,53 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+function MatchStat(data){
+    data = data.data;
+    console.log("ddt", data);
+    const val1 = data[1];
+    const val2 = data[2];
+    const name = data[0];
+
+    let secondIsMajor = false;
+    if (val2 > val1) secondIsMajor = true;
+
+    const lines = () => {
+
+        const get_line_width = () => {
+            const v1 = +(val1.replace(/[^\d]/g, ''));
+            const v2 = +(val2.replace(/[^\d]/g, ''));
+            const sum = v1 + v2;
+            const w1 = ((v1 / sum) * 100) + '%';
+            const w2 = ((v2 / sum) * 100) + '%';
+            return [w1,w2];
+        }
+
+        return(
+        <>
+        <div className={secondIsMajor ? "match-stat__line" : "match-stat__line match-stat__line--major"}>
+            <div style={{'width': get_line_width()[0]}}></div>
+        </div>
+        <div className={secondIsMajor ? "match-stat__line match-stat__line--major" : "match-stat__line"}>
+            <div style={{ 'width': get_line_width()[1] }}></div>
+        </div>
+        </>
+        );
+    }
+
+    return(
+        <div className="match-stat">
+            <div className="match-stat__top">
+                <div className="match-stat__val">{val1}</div>
+                <div className="match-stat__name">{name}</div>
+                <div className="match-stat__val">{val2}</div>
+            </div>
+            <div className="match-stat__bottom">
+                {lines()}
+            </div>
+        </div>
+    );
+}
+
 function MatchStatistic(){
 
     const [data, setData] = useState(null);
@@ -69,8 +116,25 @@ function MatchStatistic(){
     }, [data]);
 
     if (!matchid) return;
+    if (!data) return;
 
-    return (<div>statistic block</div>);
+    const statisctic = () => {
+        let elems = [];
+        if (!data['Матч']) return;
+        data['Матч'].forEach((elem)=>{
+            elems.push((<MatchStat data={elem}/>));
+        });
+        return elems;
+    }
+
+    return (
+    <div className="match-statisctic">
+        <div className="match-statisctic__title match-time">Статистика</div>
+        <div className="match-statisctic__body">
+            {statisctic()}
+        </div>
+    </div>
+    );
 
 }
 
