@@ -61,6 +61,36 @@ const Goal = (data) => {
     );
 }
 
+const Penalty = (data) => {
+    if (!data) return;
+    if (data["IE_0"] != "5") return;
+    const time = data["IB_0"];
+    const score = [data["INX_0"], data["IOX_0"]];
+    const name = data["IF_0"];
+    const command = data["IA_0"];
+
+    if (!check_undefined(time, score, name, command)) return;
+
+    const getClass = () => {
+        if (command == 1) return "match-event";
+        return "match-event match-event--right";
+    }
+
+    return (
+        <div className={getClass()}>
+            <div className="match-event__time">
+                {time}
+            </div>
+            <div className="match-event__score">
+                <span className="match-event__goal">гол</span>
+                {score[0]} - {score[1]}
+            </div>
+            <div className="match-event__name-major">{name}</div>
+        </div>
+
+    );
+}
+
 const Yellowcard = (data) => {
     if (!data) return;
     if (data["IE_0"] != "1") return; 
@@ -155,6 +185,7 @@ const matchEvents = {
     "1": Yellowcard,
     "2": Redcard,
     "3": Goal,
+    "5": Penalty,
     "6": Substitution
 }
 

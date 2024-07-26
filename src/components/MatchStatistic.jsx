@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 function MatchStat(data){
     data = data.data;
-    console.log("ddt", data);
     const val1 = data[1];
     const val2 = data[2];
     const name = data[0];
@@ -127,11 +126,14 @@ function MatchStatistic(){
         return elems;
     }
 
+    const elements = statisctic();
+    if (!elements || !elements.length) return;
+
     return (
-    <div className="match-statisctic">
-        <div className="match-statisctic__title match-time">Статистика</div>
-        <div className="match-statisctic__body">
-            {statisctic()}
+    <div className="match-statistic">
+        <div className="match-statistic__title match-time">Статистика</div>
+        <div className="match-statistic__body">
+            {elements}
         </div>
     </div>
     );
