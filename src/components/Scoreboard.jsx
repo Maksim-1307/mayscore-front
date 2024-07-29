@@ -14,7 +14,6 @@ function Scoreboard(props) {
 
     function check_filter (match) {
         if (!match) return false;
-        console.log(match);
         const status = match.status;
         switch (filter) {
             case "all": 
@@ -83,17 +82,54 @@ function Scoreboard(props) {
             );
         }
         let content = [];
+        data = group_data(data);
+        data = sort_data(data);
+        data.forEach(leagueData => {
+            content.push(renderLeague(leagueData));
+        });
+        // let leagueData = [];
+        // data.forEach(block => {
+        //     if (block && block.blockType == "league") {
+        //         content.push(renderLeague(leagueData));
+        //         leagueData = [];
+        //     } 
+        //     leagueData.push(block);
+
+        // });
+        // content.push(renderLeague(leagueData));
+        return content
+    }
+
+    function group_data(dataArray){
+        let content = [];
         let leagueData = [];
-        data.forEach(block => {
+        dataArray.forEach(block => {
             if (block && block.blockType == "league") {
-                content.push(renderLeague(leagueData));
+                content.push(leagueData);
                 leagueData = [];
-            } 
+            }
             leagueData.push(block);
 
         });
-        content.push(renderLeague(leagueData));
-        return content
+        content.push(leagueData);
+        return content;
+    }
+    function sort_data(dataArray) {
+        const priorityIDs = [];
+        const priorityCountries = ['Англия', 'Испания', 'Россия', 'Италия', 'Франция', 'Германия', 'Европа'];
+        function check_priority(league){
+            if (league && league.id && priorityIDs.includes(league.id)) return true;
+            if (league && league.country && priorityCountries.includes(league.country)) return true;
+            return false;
+        }
+        return dataArray.sort((a,b) => {
+            const leagueA = a[0];
+            const leagueB = b[0];
+            console.log(leagueA, leagueB);
+            if (check_priority(leagueA)) return -1;
+            if (check_priority(leagueB)) return 1;
+            return 0;
+        });
     }
 
     if (!data) return (<div class="ui-block">Загрузка данных</div>);
@@ -133,5 +169,4 @@ const ScoreboardProvider = ({ children }) => {
 };
 
 export { Scoreboard, ScoreboardProvider, useScoreboard };
-
 

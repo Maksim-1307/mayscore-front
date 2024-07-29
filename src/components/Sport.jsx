@@ -4,7 +4,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import League from "./League";
 import Country from "./Country"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 
 
 function Sport (props) {
