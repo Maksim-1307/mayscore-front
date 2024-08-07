@@ -1,5 +1,6 @@
 import { useAppContext } from "../AppContext";
 import Leagueslist from "./Leagueslist";
+import Banner from "./Banner";
 
 function Sidebar(props) {
 
@@ -13,4 +14,4 @@ function Sidebar(props) {
     );
 }
 
-export default Sidebar;
+export default Sidebar; 

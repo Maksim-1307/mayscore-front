@@ -110,10 +110,6 @@ function MatchStatistic(){
 
     }, []);
 
-    useEffect(()=>{
-        console.log(data);
-    }, [data]);
-
     if (!matchid) return;
     if (!data) return;
 

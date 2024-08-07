@@ -1,0 +1,369 @@
+IPI÷hdNsFkl8
+IPU÷j51UG4oe-fTkg9crD.png
+IPI÷lYejUhQq
+IPU÷2Hcy5CU0-EcACjlb5.png
+IPI÷8QQlx2tF
+IPU÷dxbVzZ76-QouPR8tk.png
+IPI÷rLE2M1p4
+IPU÷rwtBQXRq-OGu4c6Vt.png
+IPI÷8vYmSdMq
+IPU÷WWNJqbWH-I7QkmYsF.png
+IPI÷jqeuPIHh
+IPU÷hM8QDllC-4GI0yp2n.png
+IPI÷0O1tHTEA
+IPU÷Gx7NPu7k-GExoZP0q.png
+IPI÷C2740d4l
+IPU÷tnZ6LGU0-4MVmaJJC.png
+IPI÷CC4URbVb
+IPU÷IVzA9PBN-EXCa2J59.png
+
+
+
+
+TZ÷Таблица
+TZS÷Итого
+
+
+TA÷
+TT÷
+
+
+TB÷
+TC÷
+
+
+ETI÷0
+
+
+TR÷1
+TU÷q1
+TUC÷004682
+TN÷Belmont Swansea Utd.
+TI÷rLE2M1p4
+TIU÷/team/belmont-swansea-united/rLE2M1p4/
+CTT÷Команда отобралась в: Northern NSW State League (Плей-офф: 1/2)
+CTD÷0
+TM÷23
+TW÷18
+TWR÷18
+TWO÷0
+TWP÷0
+TWA÷0
+TDR÷2
+TL÷3
+TLR÷3
+TLO÷0
+TLP÷0
+TLA÷0
+TAP÷420.00
+NRM÷0
+TPK÷2.43
+TPF÷64
+TG÷84:20
+TP÷56
+
+
+LMS÷?
+LMU÷upcoming
+LME÷GEgQPe77
+LMH÷lYejUhQq
+LMA÷rLE2M1p4
+LMC÷1723248000
+LMD÷1
+LMF÷
+LMG÷
+LMJ÷West Wallsend
+LMK÷Belmont Swansea Utd.
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷b1msjw3M
+LMH÷rLE2M1p4
+LMA÷lYejUhQq
+LMC÷1722643200
+LMD÷3
+LMF÷5
+LMG÷0
+LMJ÷Belmont Swansea Utd.
+LMK÷West Wallsend
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷OrkLoICT
+LMH÷rLE2M1p4
+LMA÷CC4URbVb
+LMC÷1722038400
+LMD÷3
+LMF÷3
+LMG÷0
+LMJ÷Belmont Swansea Utd.
+LMK÷Wallsend Red Devils
+LMN÷0
+
+
+LMS÷П
+LMU÷loss stage-3
+LME÷by4eiMrh
+LMH÷C2740d4l
+LMA÷rLE2M1p4
+LMC÷1721433600
+LMD÷3
+LMF÷2
+LMG÷1
+LMJ÷Toronto Awaba Stags
+LMK÷Belmont Swansea Utd.
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷t0XUz1bB
+LMH÷rLE2M1p4
+LMA÷8QQlx2tF
+LMC÷1720915200
+LMD÷3
+LMF÷2
+LMG÷1
+LMJ÷Belmont Swansea Utd.
+LMK÷Thornton Redbacks
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷Sf2XVEGE
+LMH÷0O1tHTEA
+LMA÷rLE2M1p4
+LMC÷1720569600
+LMD÷3
+LMF÷0
+LMG÷2
+LMJ÷Kahibah
+LMK÷Belmont Swansea Utd.
+LMN÷0
+
+
+TR÷2
+TU÷q2
+TUC÷1EA8EC
+TN÷Toronto Awaba Stags
+TI÷C2740d4l
+TIU÷/team/toronto-awaba-stags/C2740d4l/
+CTT÷Команда отобралась в: Northern NSW State League (Плей-офф: 1/4)
+CTD÷0
+TM÷22
+TW÷11
+TWR÷11
+TWO÷0
+TWP÷0
+TWA÷0
+TDR÷7
+TL÷4
+TLR÷4
+TLO÷0
+TLP÷0
+TLA÷0
+TAP÷159.38
+NRM÷0
+TPK÷1.82
+TPF÷19
+TG÷51:32
+TP÷40
+
+
+LMS÷?
+LMU÷upcoming
+LME÷SvrATw8r
+LMH÷C2740d4l
+LMA÷jqeuPIHh
+LMC÷1723248000
+LMD÷1
+LMF÷
+LMG÷
+LMJ÷Toronto Awaba Stags
+LMK÷Cessnock City Hornets
+LMN÷0
+
+
+LMS÷Н
+LMU÷draw
+LME÷GITDpHQq
+LMH÷C2740d4l
+LMA÷jqeuPIHh
+LMC÷1722643200
+LMD÷3
+LMF÷1
+LMG÷1
+LMJ÷Toronto Awaba Stags
+LMK÷Cessnock City Hornets
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷vsSRH6Zr
+LMH÷C2740d4l
+LMA÷CC4URbVb
+LMC÷1722384000
+LMD÷3
+LMF÷6
+LMG÷1
+LMJ÷Toronto Awaba Stags
+LMK÷Wallsend Red Devils
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷0QRTm8gc
+LMH÷C2740d4l
+LMA÷lYejUhQq
+LMC÷1722038400
+LMD÷3
+LMF÷2
+LMG÷1
+LMJ÷Toronto Awaba Stags
+LMK÷West Wallsend
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷bsP4D60m
+LMH÷CC4URbVb
+LMA÷C2740d4l
+LMC÷1721692800
+LMD÷3
+LMF÷0
+LMG÷4
+LMJ÷Wallsend Red Devils
+LMK÷Toronto Awaba Stags
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷by4eiMrh
+LMH÷C2740d4l
+LMA÷rLE2M1p4
+LMC÷1721433600
+LMD÷3
+LMF÷2
+LMG÷1
+LMJ÷Toronto Awaba Stags
+LMK÷Belmont Swansea Utd.
+LMN÷0
+
+
+TR÷3
+TS÷1
+TU÷q2
+TUC÷1EA8EC
+TN÷Kahibah
+TI÷0O1tHTEA
+TIU÷/team/kahibah/0O1tHTEA/
+CTT÷Команда отобралась в: Northern NSW State League (Плей-офф: 1/4)
+CTD÷0
+TM÷22
+TW÷12
+TWR÷12
+TWO÷0
+TWP÷0
+TWA÷0
+TDR÷2
+TL÷8
+TLR÷8
+TLO÷0
+TLP÷0
+TLA÷0
+TAP÷153.13
+NRM÷0
+TPK÷1.73
+TPF÷17
+TG÷49:32
+TP÷38
+
+
+LMS÷?
+LMU÷upcoming
+LME÷z5oIRHxe
+LMH÷8QQlx2tF
+LMA÷0O1tHTEA
+LMC÷1723248000
+LMD÷1
+LMF÷
+LMG÷
+LMJ÷Thornton Redbacks
+LMK÷Kahibah
+LMN÷0
+
+
+LMS÷П
+LMU÷loss stage-3
+LME÷pYwMxNTb
+LMH÷lYejUhQq
+LMA÷0O1tHTEA
+LMC÷1722988800
+LMD÷3
+LMF÷2
+LMG÷1
+LMJ÷West Wallsend
+LMK÷Kahibah
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷8jVynnO9
+LMH÷0O1tHTEA
+LMA÷8vYmSdMq
+LMC÷1722124800
+LMD÷3
+LMF÷2
+LMG÷1
+LMJ÷Kahibah
+LMK÷Singleton Strikers
+LMN÷0
+
+
+LMS÷B
+LMU÷win
+LME÷rXgGuVrm
+LMH÷0O1tHTEA
+LMA÷lYejUhQq
+LMC÷1721779200
+LMD÷3
+LMF÷4
+LMG÷1
+LMJ÷Kahibah
+LMK÷West Wallsend
+LMN÷0
+
+
+LMS÷П
+LMU÷loss stage-3
+LME÷Kjh4k0D4
+LMH÷0O1tHTEA
+LMA÷jqeuPIHh
+LMC÷1721520000
+LMD÷3
+LMF÷1
+LMG÷2
+LMJ÷Kahibah
+LMK÷Cessnock City Hornets
+LMN÷0
+
+
+LMS÷B
+LMU÷win¬LME÷nPWM72UO¬LMH÷0O1tHTEA¬LMA÷hdNsFkl8¬LMC÷1721260800¬LMD÷3¬LMF÷1¬LMG÷0¬LMJ÷Kahibah¬LMK÷Саут Кардифф¬LMN÷0¬
+
+TR÷4¬TS÷1¬TU÷q2¬TUC÷1EA8EC¬TN÷West Wallsend¬TI÷lYejUhQq¬TIU÷/team/west-wallsend-fc/lYejUhQq/¬CTT÷Команда отобралась в: Northern NSW State League (Плей-офф: 1/4)¬CTD÷0¬TM÷22¬TW÷10¬TWR÷10¬TWO÷0¬TWP÷0¬TWA÷0¬TDR÷5¬TL÷7¬TLR÷7¬TLO÷0¬TLP÷0¬TLA÷0¬TAP÷118.42¬NRM÷0¬TPK÷1.59¬TPF÷7¬TG÷45:38¬TP÷35¬
+
+LMS÷?¬LMU÷upcoming¬LME÷GEgQPe77¬LMH÷lYejUhQq¬LMA÷rLE2M1p4¬LMC÷1723248000¬LMD÷1¬LMF÷¬LMG÷¬LMJ÷West Wallsend¬LMK÷Belmont Swansea Utd.¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷pYwMxNTb¬LMH÷lYejUhQq¬LMA÷0O1tHTEA¬LMC÷1722988800¬LMD÷3¬LMF÷2¬LMG÷1¬LMJ÷West Wallsend¬LMK÷Kahibah¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷b1msjw3M¬LMH÷rLE2M1p4¬LMA÷lYejUhQq¬LMC÷1722643200¬LMD÷3¬LMF÷5¬LMG÷0¬LMJ÷Belmont Swansea Utd.¬LMK÷West Wallsend¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷0QRTm8gc¬LMH÷C2740d4l¬LMA÷lYejUhQq¬LMC÷1722038400¬LMD÷3¬LMF÷2¬LMG÷1¬LMJ÷Toronto Awaba Stags¬LMK÷West Wallsend¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷rXgGuVrm¬LMH÷0O1tHTEA¬LMA÷lYejUhQq¬LMC÷1721779200¬LMD÷3¬LMF÷4¬LMG÷1¬LMJ÷Kahibah¬LMK÷West Wallsend¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷SGeCmvrH¬LMH÷hdNsFkl8¬LMA÷lYejUhQq¬LMC÷1721520000¬LMD÷3¬LMF÷0¬LMG÷2¬LMJ÷Саут Кардифф¬LMK÷West Wallsend¬LMN÷0¬~TR÷5¬TU÷q2¬TUC÷1EA8EC¬TN÷Singleton Strikers¬TI÷8vYmSdMq¬TIU÷/team/singleton-strikers/8vYmSdMq/¬TM÷22¬TW÷9¬TWR÷9¬TWO÷0¬TWP÷0¬TWA÷0¬TDR÷4¬TL÷9¬TLR÷9¬TLO÷0¬TLP÷0¬TLA÷0¬TAP÷100.00¬NRM÷0¬TPK÷1.41¬TPF÷0¬TG÷36:36¬TP÷31¬~LMS÷?¬LMU÷upcoming¬LME÷88tCmaaE¬LMH÷hdNsFkl8¬LMA÷8vYmSdMq¬LMC÷1723334400¬LMD÷1¬LMF÷¬LMG÷¬LMJ÷Саут Кардифф¬LMK÷Singleton Strikers¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷jypZiaY9¬LMH÷8vYmSdMq¬LMA÷hdNsFkl8¬LMC÷1722643200¬LMD÷3¬LMF÷4¬LMG÷0¬LMJ÷Singleton Strikers¬LMK÷Саут Кардифф¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷8jVynnO9¬LMH÷0O1tHTEA¬LMA÷8vYmSdMq¬LMC÷1722124800¬LMD÷3¬LMF÷2¬LMG÷1¬LMJ÷Kahibah¬LMK÷Singleton Strikers¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷4vA86bm3¬LMH÷C2740d4l¬LMA÷8vYmSdMq¬LMC÷1721174400¬LMD÷3¬LMF÷2¬LMG÷4¬LMJ÷Toronto Awaba Stags¬LMK÷Singleton Strikers¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷EDVxZvTN¬LMH÷CC4URbVb¬LMA÷8vYmSdMq¬LMC÷1720915200¬LMD÷3¬LMF÷0¬LMG÷2¬LMJ÷Wallsend Red Devils¬LMK÷Singleton Strikers¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷Wn5uQqpg¬LMH÷8vYmSdMq¬LMA÷8QQlx2tF¬LMC÷1720224000¬LMD÷3¬LMF÷3¬LMG÷0¬LMJ÷Singleton Strikers¬LMK÷Thornton Redbacks¬LMN÷0¬~TR÷6¬TN÷Саут Кардифф¬TI÷hdNsFkl8¬TIU÷/team/south-cardiff/hdNsFkl8/¬TM÷22¬TW÷8¬TWR÷8¬TWO÷0¬TWP÷0¬TWA÷0¬TDR÷3¬TL÷11¬TLR÷11¬TLO÷0¬TLP÷0¬TLA÷0¬TAP÷58.00¬NRM÷0¬TPK÷1.23¬TPF÷-21¬TG÷29:50¬TP÷27¬~LMS÷?¬LMU÷upcoming¬LME÷88tCmaaE¬LMH÷hdNsFkl8¬LMA÷8vYmSdMq¬LMC÷1723334400¬LMD÷1¬LMF÷¬LMG÷¬LMJ÷Саут Кардифф¬LMK÷Singleton Strikers¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷jypZiaY9¬LMH÷8vYmSdMq¬LMA÷hdNsFkl8¬LMC÷1722643200¬LMD÷3¬LMF÷4¬LMG÷0¬LMJ÷Singleton Strikers¬LMK÷Саут Кардифф¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷KEzitdzi¬LMH÷jqeuPIHh¬LMA÷hdNsFkl8¬LMC÷1722038400¬LMD÷3¬LMF÷4¬LMG÷0¬LMJ÷Cessnock City Hornets¬LMK÷Саут Кардифф¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷SGeCmvrH¬LMH÷hdNsFkl8¬LMA÷lYejUhQq¬LMC÷1721520000¬LMD÷3¬LMF÷0¬LMG÷2¬LMJ÷Саут Кардифф¬LMK÷West Wallsend¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷nPWM72UO¬LMH÷0O1tHTEA¬LMA÷hdNsFkl8¬LMC÷1721260800¬LMD÷3¬LMF÷1¬LMG÷0¬LMJ÷Kahibah¬LMK÷Саут Кардифф¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷C6QEvqan¬LMH÷C2740d4l¬LMA÷hdNsFkl8¬LMC÷1720828800¬LMD÷3¬LMF÷0¬LMG÷1¬LMJ÷Toronto Awaba Stags¬LMK÷Саут Кардифф¬LMN÷0¬~TR÷7¬TN÷Thornton Redbacks¬TI÷8QQlx2tF¬TIU÷/team/thornton-redbacks/8QQlx2tF/¬TM÷22¬TW÷6¬TWR÷6¬TWO÷0¬TWP÷0¬TWA÷0¬TDR÷7¬TL÷9¬TLR÷9¬TLO÷0¬TLP÷0¬TLA÷0¬TAP÷79.55¬NRM÷0¬TPK÷1.14¬TPF÷-9¬TG÷35:44¬TP÷25¬~LMS÷?¬LMU÷upcoming¬LME÷z5oIRHxe¬LMH÷8QQlx2tF¬LMA÷0O1tHTEA¬LMC÷1723248000¬LMD÷1¬LMF÷¬LMG÷¬LMJ÷Thornton Redbacks¬LMK÷Kahibah¬LMN÷0¬~LMS÷Н¬LMU÷draw¬LME÷dvjisrKi¬LMH÷CC4URbVb¬LMA÷8QQlx2tF¬LMC÷1722729600¬LMD÷3¬LMF÷2¬LMG÷2¬LMJ÷Wallsend Red Devils¬LMK÷Thornton Redbacks¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷YcC9TIjo¬LMH÷8QQlx2tF¬LMA÷CC4URbVb¬LMC÷1721433600¬LMD÷3¬LMF÷4¬LMG÷0¬LMJ÷Thornton Redbacks¬LMK÷Wallsend Red Devils¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷t0XUz1bB¬LMH÷rLE2M1p4¬LMA÷8QQlx2tF¬LMC÷1720915200¬LMD÷3¬LMF÷2¬LMG÷1¬LMJ÷Belmont Swansea Utd.¬LMK÷Thornton Redbacks¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷Wn5uQqpg¬LMH÷8vYmSdMq¬LMA÷8QQlx2tF¬LMC÷1720224000¬LMD÷3¬LMF÷3¬LMG÷0¬LMJ÷Singleton Strikers¬LMK÷Thornton Redbacks¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷Iqu6BpVa¬LMH÷8QQlx2tF¬LMA÷jqeuPIHh¬LMC÷1719619200¬LMD÷3¬LMF÷2¬LMG÷3¬LMJ÷Thornton Redbacks¬LMK÷Cessnock City Hornets¬LMN÷0¬~TR÷8¬TN÷Cessnock City Hornets¬TI÷jqeuPIHh¬TIU÷/team/cessnock-city-hornets/jqeuPIHh/¬TM÷21¬TW÷7¬TWR÷7¬TWO÷0¬TWP÷0¬TWA÷0¬TDR÷2¬TL÷12¬TLR÷12¬TLO÷0¬TLP÷0¬TLA÷0¬TAP÷64.71¬NRM÷0¬TPK÷1.10¬TPF÷-18¬TG÷33:51¬TP÷23¬~LMS÷?¬LMU÷upcoming¬LME÷SvrATw8r¬LMH÷C2740d4l¬LMA÷jqeuPIHh¬LMC÷1723248000¬LMD÷1¬LMF÷¬LMG÷¬LMJ÷Toronto Awaba Stags¬LMK÷Cessnock City Hornets¬LMN÷0¬~LMS÷Н¬LMU÷draw¬LME÷GITDpHQq¬LMH÷C2740d4l¬LMA÷jqeuPIHh¬LMC÷1722643200¬LMD÷3¬LMF÷1¬LMG÷1¬LMJ÷Toronto Awaba Stags¬LMK÷Cessnock City Hornets¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷KEzitdzi¬LMH÷jqeuPIHh¬LMA÷hdNsFkl8¬LMC÷1722038400¬LMD÷3¬LMF÷4¬LMG÷0¬LMJ÷Cessnock City Hornets¬LMK÷Саут Кардифф¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷Kjh4k0D4¬LMH÷0O1tHTEA¬LMA÷jqeuPIHh¬LMC÷1721520000¬LMD÷3¬LMF÷1¬LMG÷2¬LMJ÷Kahibah¬LMK÷Cessnock City Hornets¬LMN÷0¬~LMS÷B¬LMU÷win¬LME÷Iqu6BpVa¬LMH÷8QQlx2tF¬LMA÷jqeuPIHh¬LMC÷1719619200¬LMD÷3¬LMF÷2¬LMG÷3¬LMJ÷Thornton Redbacks¬LMK÷Cessnock City Hornets¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷4MGxAXge¬LMH÷jqeuPIHh¬LMA÷8vYmSdMq¬LMC÷1719014400¬LMD÷3¬LMF÷0¬LMG÷1¬LMJ÷Cessnock City Hornets¬LMK÷Singleton Strikers¬LMN÷0¬~TR÷9¬TN÷Wallsend Red Devils¬TI÷CC4URbVb¬TIU÷/team/wallsend-red-devils/CC4URbVb/¬TM÷22¬TW÷1¬TWR÷1¬TWO÷0¬TWP÷0¬TWA÷0¬TDR÷2¬TL÷19¬TLR÷19¬TLO÷0¬TLP÷0¬TLA÷0¬TAP÷28.05¬NRM÷0¬TPK÷0.23¬TPF÷-59¬TG÷23:82¬TP÷5¬~LMS÷?¬LMU÷upcoming¬LME÷dYEaveM0¬LMH÷0O1tHTEA¬LMA÷CC4URbVb¬LMC÷1723852800¬LMD÷1¬LMF÷¬LMG÷¬LMJ÷Kahibah¬LMK÷Wallsend Red Devils¬LMN÷0¬~LMS÷Н¬LMU÷draw¬LME÷dvjisrKi¬LMH÷CC4URbVb¬LMA÷8QQlx2tF¬LMC÷1722729600¬LMD÷3¬LMF÷2¬LMG÷2¬LMJ÷Wallsend Red Devils¬LMK÷Thornton Redbacks¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷vsSRH6Zr¬LMH÷C2740d4l¬LMA÷CC4URbVb¬LMC÷1722384000¬LMD÷3¬LMF÷6¬LMG÷1¬LMJ÷Toronto Awaba Stags¬LMK÷Wallsend Red Devils¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷OrkLoICT¬LMH÷rLE2M1p4¬LMA÷CC4URbVb¬LMC÷1722038400¬LMD÷3¬LMF÷3¬LMG÷0¬LMJ÷Belmont Swansea Utd.¬LMK÷Wallsend Red Devils¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷bsP4D60m¬LMH÷CC4URbVb¬LMA÷C2740d4l¬LMC÷1721692800¬LMD÷3¬LMF÷0¬LMG÷4¬LMJ÷Wallsend Red Devils¬LMK÷Toronto Awaba Stags¬LMN÷0¬~LMS÷П¬LMU÷loss stage-3¬LME÷YcC9TIjo¬LMH÷8QQlx2tF¬LMA÷CC4URbVb¬LMC÷1721433600¬LMD÷3¬LMF÷4¬LMG÷0¬LMJ÷Thornton Redbacks¬LMK÷Wallsend Red Devils¬LMN÷0¬~HCI÷513¬HCT÷Место¬HCN÷#¬~HCI÷805¬HCT÷Команда¬HCN÷Команда¬~HCI÷514¬HCT÷Игры¬HCN÷И¬~HCI÷887¬HCT÷Выигрыши¬HCN÷B¬~HCI÷503¬HCT÷Ничьи¬HCN÷Н¬~HCI÷886¬HCT÷Проигрыши¬HCN÷П¬~HCI÷536¬HCT÷Голы¬HCN÷Г¬~HCI÷874¬HCT÷Разница голов¬HCN÷РГ¬~HCI÷169¬HCT÷Очки¬HCN÷О¬~HCI÷537¬HCT÷Последние 5 матчей¬HCN÷Форма¬~TV÷q1|Проход дальше - Northern NSW State League (Плей-офф: 1/2)|004682¬TV÷q2|Проход дальше - Northern NSW State League (Плей-офф: 1/4)|1EA8EC¬~TQ÷Если команды наберут одинаковое количество очков, то места в таблице будут определены по разнице мячей.¬~TX÷1¬~A1÷¬~
+
+
+

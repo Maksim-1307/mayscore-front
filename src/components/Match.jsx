@@ -7,6 +7,7 @@ import MatchInfo from "./MatchInfo";
 import MatchProgress from "./MatchProgress";
 import MatchStatistic from "./MatchStatistic";
 import MatchCoefficients from "./MatchCoefficients";
+import MatchTable from "./MatchTable";
 
 function Match(){
     const {matchid} = useParams();
@@ -168,7 +169,7 @@ function Match(){
                 <div class="ui-block">
                     <MatchProgress />
                     <MatchStatistic />
-                    <MatchCoefficients />
+                    <MatchTable />
                 </div>
             </div>
         </div>

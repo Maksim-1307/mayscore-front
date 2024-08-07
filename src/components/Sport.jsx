@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import League from "./League";
 import Country from "./Country"
 import { useState, useEffect, useReducer } from "react";
+import Banner from "./Banner";
 
 
 function Sport (props) {
@@ -54,6 +55,7 @@ function Sport (props) {
             <div className='container'>
                 <Sidebar data={data}/>
                 <div className="content">
+                    <Banner className={'desctop-banner'}/>
                     <Scoreboard data={data}/>
                 </div>
             </div>

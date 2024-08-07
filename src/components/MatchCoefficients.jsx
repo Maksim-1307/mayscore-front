@@ -286,7 +286,6 @@ function MatchCoefficients(){
         'OVER_UNDER': overUnder,
         'DOUBLE_CHANCE': doubleChance,
         'CORRECT_SCORE': currentScore,
-        'BOTH_TEAMS_TO_SCORE': bothToScore
     };
 
     const getCoefficients = () => {

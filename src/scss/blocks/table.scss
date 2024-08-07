@@ -1,0 +1,28 @@
+.table{
+    &__header{
+        text-transform: uppercase;
+    }
+    &__row{
+        display: flex;
+    }
+    &__col{
+        display: flex;
+        justify-content: center;
+        &--grow{
+            flex-grow: 1;
+            justify-content: flex-start;
+        }
+        &--32{
+            width: 32px;
+            max-width: 32px;
+        }
+        &--48 {
+            width: 48px;
+            max-width: 48px;
+        }
+        &--160 {
+            width: 160px;
+            max-width: 160px;
+        }
+    }
+}

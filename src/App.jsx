@@ -12,6 +12,7 @@ import Game from './components/Game.jsx';
 import Match from './components/Match.jsx';
 import { ScoreboardProvider } from './components/Scoreboard.jsx';
 import { AppContextProvider } from './AppContext.jsx';
+import Banner from './components/Banner.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <AppContextProvider>
       <ScoreboardProvider>
         <BrowserRouter>
+          <Banner className="mobile-banner" />
           <Header />
           <Routes>
             <Route path="/" Component={Sport} />
