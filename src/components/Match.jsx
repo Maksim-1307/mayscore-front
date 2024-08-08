@@ -10,10 +10,11 @@ import MatchCoefficients from "./MatchCoefficients";
 import MatchTable from "./MatchTable";
 
 function Match(){
-    const {matchid} = useParams();
 
+    const {matchid} = useParams();
     const [data, setData] = useState(null);
     const [isLoading, setLoading] = useState(true);
+    const [tab, setTab] = useState("match");
 
     useEffect(() => {
         const time = 60000;
@@ -107,9 +108,24 @@ function Match(){
         return bcData;
     }
 
-    // useEffect(()=>{
-    //     if (data.maindata) console.log(data.maindata[0]);
-    // }, [data]);
+    function renderContent () {
+        switch (tab) {
+            case "coeff":
+                return (<>
+                    пока готово не полностью <br></br>
+                    <MatchCoefficients />
+                </>);
+            case "h2h":
+                return (<>H2H пока еще нет</>);
+            case "table":
+                return (<MatchTable />);
+            default:
+                return (<>  
+                    <MatchProgress />
+                    <MatchStatistic />
+                </>)
+        }
+    }
 
     if (!data) return;
 
@@ -146,19 +162,27 @@ function Match(){
                         </div>
                         <div class="game__bottom">
                             <div class="nav-list league__nav-list">
-                                <button class="nav-list__point nav-list__point--current">
+                                <button 
+                                class={tab == 'match' ? "nav-list__point nav-list__point--current" : "nav-list__point"} 
+                                onClick={()=>setTab('match')}>
                                     <span class="nav-list__text">матч</span>
                                     <div class="nav-list__line"></div>
                                 </button>
-                                <button class="nav-list__point">
+                                <button 
+                                class={tab == 'coeff' ? "nav-list__point nav-list__point--current" : "nav-list__point"} 
+                                onClick={() => setTab('coeff')}>
                                     <span class="nav-list__text">коэфф.</span>
                                     <div class="nav-list__line"></div>
                                 </button>
-                                <button class="nav-list__point">
+                                <button 
+                                class={tab == 'h2h' ? "nav-list__point nav-list__point--current" : "nav-list__point"} 
+                                onClick={() => setTab('h2h')}>
                                     <span class="nav-list__text">h2h</span>
                                     <div class="nav-list__line"></div>
                                 </button>
-                                <button class="nav-list__point">
+                                <button 
+                                class={tab == 'table' ? "nav-list__point nav-list__point--current" : "nav-list__point"} 
+                                onClick={() => setTab('table')}>
                                     <span class="nav-list__text">таблица</span>
                                     <div class="nav-list__line"></div>
                                 </button>
@@ -167,13 +191,11 @@ function Match(){
                     </div>
                 </div>
                 <div class="ui-block">
-                    <MatchProgress />
-                    <MatchStatistic />
-                    <MatchTable />
+                    {renderContent()}
                 </div>
             </div>
         </div>
     </section>);
 }
 
-export default Match;
+export default Match; 

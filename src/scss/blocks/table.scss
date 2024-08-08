@@ -1,13 +1,32 @@
 .table{
     &__header{
         text-transform: uppercase;
+        background-color: var(--ui-color);
+        font-size: 12px;
+        font-weight: 700;
+        color: #000000B3;
+        height: 22px !important;
+        max-height: 22px;
+        border: none !important;
+        border-radius: 5px;
+        .table__col{
+            height: 22px;
+            max-height: 22px;
+        }
     }
     &__row{
         display: flex;
+        height: 35px;
+        max-height: 35px;
+        border-bottom: 1.5px solid rgba($color: #000000, $alpha: .1);
     }
     &__col{
         display: flex;
         justify-content: center;
+        align-items: center;
+        &--bold{
+            font-weight: 700;
+        }
         &--grow{
             flex-grow: 1;
             justify-content: flex-start;
@@ -24,5 +43,41 @@
             width: 160px;
             max-width: 160px;
         }
+    }
+    &__element{
+        width: 20px;
+        height: 20px;
+        max-width: 20px;
+        max-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: var(--ui-color);
+
+        &--blue{
+            background-color: #0089ff;
+        }
+        &--light-blue{
+            background-color: #7cd4ff;
+        }
+        &--red{
+            background-color: #FF0000;
+        }
+        &--green{
+            background-color: #00ff46;
+        }
+        &--yellow {
+            background-color: #ffd400;
+        }
+
+        & + & {
+            margin-left: 3px;
+        }
+    }
+    &__no-data{
+        font-weight: 700;
+        text-align: center;
+        padding: 10px 15px;
     }
 }
