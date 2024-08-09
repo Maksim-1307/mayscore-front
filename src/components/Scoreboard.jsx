@@ -57,29 +57,40 @@ function Scoreboard(props) {
 
     function renderMatches(data) {
         function renderLeague(leagueData){
-        if (leagueData[0]) return (
-            <ClosingList className="matches__closing-list">
-                <div class="closing-list__top matches__league">
-                    <div class="matches__league-title">
-                            <img class="matches__icon" src={leagueData[0].icon} />
-                            <span class="matches__country">{leagueData[0].country}:</span>
-                        <a href={leagueData[0]["url"]} class="matches__league-name">{leagueData[0].name}</a>
-                    </div>
-                    <ClosingListButton>
-                        <img src={arrowIcon} />
-                    </ClosingListButton>
-                </div>
-                <ClosingListBody>
-                    {leagueData.map((block) => {
-                        if (!check_filter(block)) return;
-                        return (<>
+
+            const matches = () => {
+                let matches = [];
+                leagueData.map((block) => {
+                    if (check_filter(block)){
+                        matches.push (<>
                             <MatchCard data={block} />
                             <div class="match-delmiter"></div>
                         </>)
-                    })}    
-                </ClosingListBody>
-            </ClosingList>
-            );
+                    }
+                });
+                return matches;
+            }
+
+            if (!leagueData[0]) return;
+
+            if (matches().length){ return (
+                <ClosingList className="matches__closing-list">
+                    <div class="closing-list__top matches__league">
+                        <div class="matches__league-title">
+                                <img class="matches__icon" src={leagueData[0].icon} />
+                                <span class="matches__country">{leagueData[0].country}:</span>
+                            <a href={leagueData[0]["url"]} class="matches__league-name">{leagueData[0].name}</a>
+                        </div>
+                        <ClosingListButton>
+                            <img src={arrowIcon} />
+                        </ClosingListButton>
+                    </div>
+                    <ClosingListBody>
+                        {matches()}    
+                    </ClosingListBody>
+                </ClosingList>
+                );
+            } 
         }
         let content = [];
         data = group_data(data);
@@ -87,17 +98,13 @@ function Scoreboard(props) {
         data.forEach(leagueData => {
             content.push(renderLeague(leagueData));
         });
-        // let leagueData = [];
-        // data.forEach(block => {
-        //     if (block && block.blockType == "league") {
-        //         content.push(renderLeague(leagueData));
-        //         leagueData = [];
-        //     } 
-        //     leagueData.push(block);
 
-        // });
-        // content.push(renderLeague(leagueData));
-        return content
+        content = content.filter(element => element !== undefined);
+
+        if (content.length) return content;
+        return (
+            <div className="matches__no-data">нет матчей</div>
+        );
     }
 
     function group_data(dataArray){

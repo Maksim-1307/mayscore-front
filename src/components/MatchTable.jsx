@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import arrowIcon from "../images/icons/arrow.png";
 
 function MatchTable () {
 
@@ -99,6 +100,14 @@ function MatchTable () {
                 return;
             }
 
+            const ArrowUp = () => {
+                if (!lineData[0]['CTT']) return;
+                return (
+                    <div className="match-table__arrow">
+                    </div>
+                );
+            }
+
             return(
                 <div className="table__row">
                         <div className="table__col table__col--32 table__col--bold">
@@ -108,6 +117,7 @@ function MatchTable () {
                         </div>
                         <div className="table__col table__col--grow">
                             {lineData[0]['TN']}
+                            <ArrowUp />
                         </div>
                         <div className="table__col table__col--32">
                             {lineData[0]['TM']}
