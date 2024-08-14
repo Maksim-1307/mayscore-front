@@ -8,13 +8,14 @@ import MatchProgress from "./MatchProgress";
 import MatchStatistic from "./MatchStatistic";
 import MatchCoefficients from "./MatchCoefficients";
 import MatchTable from "./MatchTable";
+import H2H from "./H2H";
 
 function Match(){
 
     const {matchid} = useParams();
     const [data, setData] = useState(null);
     const [isLoading, setLoading] = useState(true);
-    const [tab, setTab] = useState("match");
+    const [tab, setTab] = useState("h2h");
 
     useEffect(() => {
         const time = 60000;
@@ -116,7 +117,7 @@ function Match(){
                     <MatchCoefficients />
                 </>);
             case "h2h":
-                return (<>H2H пока еще нет</>);
+                return (<H2H />);
             case "table":
                 return (<MatchTable />);
             default:

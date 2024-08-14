@@ -20,7 +20,9 @@ function Scoreboard(props) {
                 return true;
                 break;
             case "live":
-                if (status == 2) return true;
+                if (["42", "2", "12", "13", "6", "7", "38", "46", "10", "11", "43"].includes(status)){
+                    return true
+                }
                 break;
             case "schedule":
                 if (status == 1) return true;
