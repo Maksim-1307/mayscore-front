@@ -43,30 +43,64 @@ function H2H () {
             return (<div className="match-time">{elemdata['KB']}</div>);
         }
         const H2HMatch = (elemdata) => {
+
+            const result = () => {
+                switch (elemdata['KN']) {
+                    case "w":
+                        return(
+                            <div className="table__element table__element--green">
+                                В
+                            </div>
+                        );
+                    case "l":
+                        return(
+                            <div className="table__element table__element--red">
+                                П
+                            </div>
+                        );
+                    case "d":
+                        return(
+                            <div className="table__element table__element--yellow">
+                                Н
+                            </div>
+                        );
+                }
+            }
+
+            const date = () => {
+                const dateObj = new Date(+elemdata['KC'] * 1000);
+                if (!dateObj) return;
+                const year = dateObj.getFullYear() % 100;
+                const month = dateObj.getMonth() + 1; 
+                const day = dateObj.getDate();
+                //return dateObj.toString();
+                //console.log((+elemdata['KC'] * 1000) + " is " + dateObj.toString());
+                //return dateObj.toString();
+                return [day, month, year].join('.');
+            }
+
             return (
                 <><div className="h2h-match">
                     <div className="h2h-match__date">
-                        13.08.24
+                        {date()}
                     </div>
                     <div className="h2h-match__league">
-                        КУБ
+                        {elemdata['KI']}
                     </div>
                     <div className="h2h-match__players">
                         <div className="h2h-match__player">
-                            <div className="h2h-match__player-icon" style={{ "background-image": "url('https://static.flashscore.com/res/image/data/SGQbHBAr-8Ux0cWp6.png')"}}></div>
-                            <div className="h2h-match__player-name">Оренбург</div>
-                            <div className="h2h-match__player-score">2</div>
+                            <div className="h2h-match__player-icon" style={{ "background-image": `url('https://static.flashscore.com/res/image/data/${elemdata['EC']}')`}}></div>
+                            <div className="h2h-match__player-name">{elemdata['FH']}</div>
+                            <div className="h2h-match__player-score">{elemdata['KU']}</div>
                         </div>
                         <div className="h2h-match__player">
-                            <div className="h2h-match__player-icon" style={{ "background-image": "url('https://static.flashscore.com/res/image/data/SGQbHBAr-8Ux0cWp6.png')" }}></div>
-                            <div className="h2h-match__player-name">Логомотив Москва</div>
-                            <div className="h2h-match__player-score">3</div>
+                            <div className="h2h-match__player-icon" style={{ "background-image": `url('https://static.flashscore.com/res/image/data/${elemdata['ED']}')` }}></div>
+                            <div className="h2h-match__player-name">{elemdata['FK']}</div>
+                            <div className="h2h-match__player-score">{elemdata['KT']}</div>
                         </div>
                     </div>
                     <div>
-                        <div className="table__element table__element--red">
-                            П
-                        </div>
+                        {result()}
                     </div>
                 </div>
                 <div className="match-delmiter"></div>
