@@ -5,8 +5,30 @@ import { useParams } from "react-router-dom";
 function H2H () {
 
     const [data, setData] = useState(null);
+    const [tab, setTab] = useState("Итого");
     const [isLoading, setLoading] = useState(true);
     const {matchid} = useParams();
+
+    const TabButtons = () => {
+        if (!data) return;
+        let buttons = [];
+        data.forEach(el => {
+            if (el['KA']) buttons.push(
+                <button 
+                    className={is_active(el['KA']) ? "button-1 nav-buttons__button nav-buttons__button--active" : "button-1 nav-buttons__button"}
+                    onClick={() => setTab(el['KA'])}
+                    >{el['KA']}
+                </button>);
+        });
+
+        function is_active(name){
+            return tab == name;
+        }
+
+        return(
+            <div className="nav-buttons">{buttons}</div>
+        );
+    }
 
     function handle_data(response) {
         let blocks = response.split('~');
@@ -24,6 +46,7 @@ function H2H () {
     }
 
     function render_content(){
+        console.log("render");
         if (!data) return;
 
         function is_tab(elem) {
@@ -34,10 +57,6 @@ function H2H () {
         }
         function is_match(elem) {
             return (elem['KC'] != undefined);
-        }
-
-        const H2HTab = (elemdata) => {
-            return (<div>{elemdata['KA']}</div>);
         }
         const H2HTitle = (elemdata) => {
             return (<div className="match-time">{elemdata['KB']}</div>);
@@ -80,7 +99,7 @@ function H2H () {
             }
 
             return (
-                <><div className="h2h-match">
+                <><a className="h2h-match" href={"/match/" + elemdata['KP']}>
                     <div className="h2h-match__date">
                         {date()}
                     </div>
@@ -102,7 +121,7 @@ function H2H () {
                     <div>
                         {result()}
                     </div>
-                </div>
+                </a>
                 <div className="match-delmiter"></div>
                 </>
             );
@@ -110,10 +129,21 @@ function H2H () {
 
         let elements = [];
 
+        let flag = false;
         data.forEach(elem => {
-            if (is_title(elem)) elements.push(<>{H2HTitle(elem)}</>); 
-            if (is_tab(elem)) elements.push(<>{H2HTab(elem)}</>); 
-            if (is_match(elem)) elements.push(<>{H2HMatch(elem)}</>); 
+
+            if (is_tab(elem)) { 
+                if (elem['KA'] == tab) {
+                    flag = true;
+                } else {
+                    flag = false;
+                }
+            }
+
+            if (flag) {
+                if (is_title(elem)) elements.push(<>{H2HTitle(elem)}</>); 
+                if (is_match(elem)) elements.push(<>{H2HMatch(elem)}</>); 
+            }
         });
         return elements;
     }
@@ -156,7 +186,10 @@ function H2H () {
     }, [data]);
 
 
-    return (<>{render_content()}</>);
+    return (<div className="h2h">
+        <TabButtons /> 
+        {render_content()}
+    </div>);
 }
 
 export default H2H;

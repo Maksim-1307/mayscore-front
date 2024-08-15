@@ -49,3 +49,19 @@
         gap: 15px;
     }
 }
+.h2h{
+    .match-time {
+        margin-top: 10px;
+    }
+    .nav-buttons{
+        overflow: scroll;
+        max-width: calc(100vw - 70px);
+    
+        @media screen and (max-width: 500px) {
+            max-width: calc(100vw - 60px);
+        }
+    }
+    .button-1{
+        white-space: nowrap;
+    }
+}

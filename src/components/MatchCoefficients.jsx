@@ -306,7 +306,6 @@ function MatchCoefficients(){
     }
 
     return(<>
-        coeff
         {getCoefficients()}
     </>);
 }

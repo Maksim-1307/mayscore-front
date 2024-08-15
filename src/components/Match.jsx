@@ -15,7 +15,7 @@ function Match(){
     const {matchid} = useParams();
     const [data, setData] = useState(null);
     const [isLoading, setLoading] = useState(true);
-    const [tab, setTab] = useState("h2h");
+    const [tab, setTab] = useState('match');
 
     useEffect(() => {
         const time = 60000;
@@ -113,7 +113,6 @@ function Match(){
         switch (tab) {
             case "coeff":
                 return (<>
-                    пока готово не полностью <br></br>
                     <MatchCoefficients />
                 </>);
             case "h2h":
