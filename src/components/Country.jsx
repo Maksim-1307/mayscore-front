@@ -48,6 +48,10 @@ function Country(props) {
 
     }, []);
 
+    useEffect(()=>{
+        console.log(data);
+    }, [data]);
+
     return (
         <section class="main-section">
             <div className='container'>

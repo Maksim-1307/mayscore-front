@@ -6,6 +6,7 @@ import League from "./League";
 import Country from "./Country"
 import { useState, useEffect, useReducer } from "react";
 import Banner from "./Banner";
+import Helmet from "./Helmet";
 
 
 function Sport (props) {
@@ -52,6 +53,10 @@ function Sport (props) {
 
     return(
         <section class="main-section">
+            <Helmet 
+                title="Спорт, результаты матчей, live"
+                description="Mayscor - Это сайт с актуальной информацией о спортивных результатах и с расписанием матчей. Футбольных матчей, хоккея, баскетбола и других видов спорта. Смотрите, с каким счетом закончился матч любимой команды, а также лайв статистику спортивных состязаний."
+            />
             <div className='container'>
                 <Sidebar data={data}/>
                 <div className="content">

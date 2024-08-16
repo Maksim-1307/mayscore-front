@@ -4,6 +4,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect, useReducer } from "react";
 import Breadcrumbs from "./Breadcrumbs";
+import Helmet from "./Helmet";
 
 
 function League(props) {
@@ -51,10 +52,22 @@ function League(props) {
 
     }, []);
 
+    function helmet () {
+        const countryName = data[1].country;
+        const leagueName = data[1].name;
+        return (
+            <Helmet
+                title={countryName + " " + leagueName + " результаты, рассписание матчей"}
+                description={`${leagueName} результаты, таблица, лайв, счет, ход и статистика матчей.`}
+            />
+        );
+    }
+
     if (!data) return;
 
     return (
         <section class="main-section">
+            {helmet()}
             <div className='container'>
                 <Sidebar data={data}/>
                 <div className="content">
@@ -92,5 +105,6 @@ function League(props) {
         </section>
     );
 }
+
 
 export default League;

@@ -9,6 +9,8 @@ import MatchStatistic from "./MatchStatistic";
 import MatchCoefficients from "./MatchCoefficients";
 import MatchTable from "./MatchTable";
 import H2H from "./H2H";
+import Helmet from "./Helmet";
+import { renderToReadableStream } from "react-dom/server";
 
 function Match(){
 
@@ -127,9 +129,38 @@ function Match(){
         }
     }
 
+    function helmet () {
+        let tabname = "";
+
+        switch (tab) {
+            case "coeff":
+                tabname = "Коэффициенты";
+                break;
+            case "h2h":
+                tabname = "H2H";
+                break;
+            case "table":
+                tabname = "Таблица";
+                break;
+            default:
+                tabname = "";
+                break;
+        }
+
+        if (tabname) tabname = "  | " + tabname;
+
+        return (<Helmet
+        
+            title={data.htmldata.participantsData.home[0].name + " - " +  data.htmldata.participantsData.away[0].name + tabname}
+            description={data.htmldata.header.tournament.category + ": " + data.htmldata.header.tournament.tournament}
+        
+        />);
+    }
+
     if (!data) return;
 
     return (<section class="main-section">
+        {helmet()}
         <div className='container'>
             <div className="content">
                 <div class="ui-block game-ui-block">
