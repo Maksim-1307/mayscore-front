@@ -130,6 +130,9 @@ function Match(){
     }
 
     function helmet () {
+
+        if (!data) return;
+
         let tabname = "";
 
         switch (tab) {

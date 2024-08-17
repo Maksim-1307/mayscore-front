@@ -181,10 +181,6 @@ function H2H () {
 
     }, []);
 
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
-
 
     return (<div className="h2h">
         <TabButtons /> 

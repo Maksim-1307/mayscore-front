@@ -40,10 +40,6 @@ function MatchCoefficients(){
     }, []);
 
 
-    useEffect(()=>{
-        console.log(data);
-    }, [data]);
-
     // odds renderers 
 
     function oneXtwo(oddsData) {
