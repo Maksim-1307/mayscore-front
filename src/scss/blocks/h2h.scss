@@ -64,4 +64,13 @@
     .button-1{
         white-space: nowrap;
     }
+    &__show-more{
+        text-align: center;
+        text-decoration: underline;
+        font-weight: 700;
+        display: block;
+        width: 100%;
+        margin: 10px 0 20px 0;
+        opacity: .8;
+    }
 }

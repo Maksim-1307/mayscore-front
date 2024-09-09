@@ -8,7 +8,7 @@ function MatchCard(props) {
     if (data.blockType != "match") return;
 
     const classname = () => {
-        if (data.status == 2) return "match match--live";
+        if (["42", "2", "12", "13", "6", "7", "38", "46", "10", "11", "43"].includes(data.status)) return "match match--live";
         return "match";
     }   
 

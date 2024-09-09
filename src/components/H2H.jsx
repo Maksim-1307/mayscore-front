@@ -7,18 +7,24 @@ function H2H () {
     const [data, setData] = useState(null);
     const [tab, setTab] = useState("Итого");
     const [isLoading, setLoading] = useState(true);
+    const [showMoreState, setShowMoreState] = useState([]);
     const {matchid} = useParams();
+
+    let renderCounter = 5;
+    let showMoreButtonRendered = false;
 
     const TabButtons = () => {
         if (!data) return;
         let buttons = [];
         data.forEach(el => {
-            if (el['KA']) buttons.push(
+            if (el['KA']){ 
+                buttons.push(
                 <button 
                     className={is_active(el['KA']) ? "button-1 nav-buttons__button nav-buttons__button--active" : "button-1 nav-buttons__button"}
                     onClick={() => setTab(el['KA'])}
                     >{el['KA']}
                 </button>);
+            }
         });
 
         function is_active(name){
@@ -46,7 +52,6 @@ function H2H () {
     }
 
     function render_content(){
-        console.log("render");
         if (!data) return;
 
         function is_tab(elem) {
@@ -98,6 +103,8 @@ function H2H () {
                 return [day, month, year].join('.');
             }
 
+            renderCounter--;
+
             return (
                 <><a className="h2h-match" href={"/match/" + elemdata['KP']}>
                     <div className="h2h-match__date">
@@ -130,23 +137,44 @@ function H2H () {
         let elements = [];
 
         let flag = false;
+
+        let currentBlock = "";
         data.forEach(elem => {
 
             if (is_tab(elem)) { 
                 if (elem['KA'] == tab) {
                     flag = true;
-                } else {
+                } else { 
                     flag = false;
                 }
             }
 
-            if (flag) {
-                if (is_title(elem)) elements.push(<>{H2HTitle(elem)}</>); 
-                if (is_match(elem)) elements.push(<>{H2HMatch(elem)}</>); 
+
+            if (flag) {  
+                if (is_title(elem)) {
+                    currentBlock = elem['KB']
+                    renderCounter = 5;
+                    showMoreButtonRendered = false;
+                    elements.push(<>{H2HTitle(elem)}</>); 
+                }
+                if (is_match(elem)) {
+                    const ccurentBlock = currentBlock;
+                    if (!showMoreState.includes(ccurentBlock) && renderCounter <= 0) {
+                        if (!showMoreButtonRendered) elements.push(<button className="h2h__show-more" onClick={() => { setShowMoreState(showMoreState.concat([ccurentBlock])) }}>показать больше матчей</button>); 
+                        showMoreButtonRendered = true;
+                    } else {
+                        elements.push(<>{H2HMatch(elem)}</>); 
+                    }
+                }
             }
         });
         return elements;
     }
+
+
+    useEffect(()=>{
+        console.log(showMoreState)
+    }, [showMoreState]);
 
     useEffect(() => {
         const time = 60000;

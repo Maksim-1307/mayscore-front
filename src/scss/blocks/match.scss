@@ -43,7 +43,8 @@
     &--live{
         .match__score, .match__status {
             opacity: 1;
-            color: var(--accent-color-darker);
+            //color: var(--accent-color-darker);
+            color: var(--accent-color-red);
         }
     }
     &-delmiter{

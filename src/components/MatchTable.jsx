@@ -80,7 +80,6 @@ function MatchTable () {
 
         const Line = (lineData) => {
             if (lineData[0]['TN'] == undefined) return;
-            console.log(lineData);
 
             function printFormElements () {
                 let elements = [];

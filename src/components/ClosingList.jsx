@@ -26,7 +26,6 @@ const ClosingList = ({ children }) => {
     const [isHidden, setIsHidden] = useState(false);
 
     const toggleVisibility = () => {
-        console.log(isHidden);
         setIsHidden(!isHidden);
     };
  

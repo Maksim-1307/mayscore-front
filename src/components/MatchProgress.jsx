@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import yellowcard from '../images/icons/yellow-card.png';
 import redcard from '../images/icons/red-card.png';
 import substitution from '../images/icons/substitution.png';
+import ballIcon from '../images/icons/ball.png';
 
 function check_undefined(...props){
     if (!Array.isArray(props)) return false;
@@ -52,7 +53,7 @@ const Goal = (data) => {
                 {time}
             </div>
             <div className="match-event__score"> 
-                <span className="match-event__goal">гол</span>
+                <img className="match-event__goal" src={ballIcon} alt="" />
                 {score[0]} - {score[1]}
             </div>
             <div className="match-event__name-major">{name}</div>
