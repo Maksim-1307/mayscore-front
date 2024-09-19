@@ -5,6 +5,7 @@ import yellowcard from '../images/icons/yellow-card.png';
 import redcard from '../images/icons/red-card.png';
 import substitution from '../images/icons/substitution.png';
 import ballIcon from '../images/icons/ball.png';
+import ballIconRed from '../images/icons/red-ball.png';
 
 function check_undefined(...props){
     if (!Array.isArray(props)) return false;
@@ -34,17 +35,28 @@ const Time = (data, key) => {
 
 const Goal = (data) => {
     if (!data) return;
-    if (data["IE_0"] != "3") return;
+    //if (data["IE_0"] != "3") return;
     const time = data["IB_0"];
     const score = [data["INX_0"], data["IOX_0"]];
     const name = data["IF_0"];
     const command = data["IA_0"];
+    const status = data["IK_0"];
 
     if (!check_undefined(time, score, name, command)) return;
+
+    const getStatus = () => {
+        if (status) return `(${status})`;
+        return;
+    }
 
     const getClass = () => {
         if (command == 1) return "match-event";
         return "match-event match-event--right";
+    }
+
+    const getIcon = () => {
+        if (status == "Автогол") return ballIconRed;
+        return ballIcon;
     }
 
     return (
@@ -53,10 +65,11 @@ const Goal = (data) => {
                 {time}
             </div>
             <div className="match-event__score"> 
-                <img className="match-event__goal" src={ballIcon} alt="" />
+                <img className="match-event__goal" src={getIcon()} alt="" />
                 {score[0]} - {score[1]}
             </div>
             <div className="match-event__name-major">{name}</div>
+            <div className="match-event__name-minor">{getStatus()}</div>
         </div>
 
     );
@@ -65,10 +78,12 @@ const Goal = (data) => {
 const Penalty = (data) => {
     if (!data) return;
     if (data["IE_0"] != "5") return;
+
     const time = data["IB_0"];
     const score = [data["INX_0"], data["IOX_0"]];
     const name = data["IF_0"];
     const command = data["IA_0"];
+    const status = data["IK_0"];
 
     if (!check_undefined(time, score, name, command)) return;
 
@@ -77,16 +92,22 @@ const Penalty = (data) => {
         return "match-event match-event--right";
     }
 
+    const getStatus = () => {
+        if (status) return `(${status})`;
+        return;
+    }
+
     return (
         <div className={getClass()}>
             <div className="match-event__time">
                 {time}
             </div>
             <div className="match-event__score">
-                <span className="match-event__goal">гол</span>
+                <img className="match-event__goal" src={ballIcon} alt="" />
                 {score[0]} - {score[1]}
             </div>
             <div className="match-event__name-major">{name}</div>
+            <div className="match-event__name-minor">{getStatus()}</div>
         </div>
 
     );
@@ -186,6 +207,7 @@ const matchEvents = {
     "1": Yellowcard,
     "2": Redcard,
     "3": Goal,
+    "4": Goal,
     "5": Penalty,
     "6": Substitution
 }
@@ -195,6 +217,10 @@ function MatchProgress () {
     const { matchid } = useParams();
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
+
+    useEffect(()=>{
+        console.log(data);
+    },[data]);
 
     useEffect(() => {
         const time = 30000;

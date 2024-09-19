@@ -13,6 +13,7 @@ import Match from './components/Match.jsx';
 import { ScoreboardProvider } from './components/Scoreboard.jsx';
 import { AppContextProvider } from './AppContext.jsx';
 import Banner from './components/Banner.jsx';
+import Footer from './components/Footer.jsx';
 
 
 function App() {
@@ -21,16 +22,19 @@ function App() {
     <AppContextProvider>
       <ScoreboardProvider>
         <BrowserRouter>
-          <Banner className="mobile-banner" />
-          <Header />
-          <Routes>
-            <Route path="/" Component={Sport} />
-            <Route path="/:sport" Component={Sport} />
-            <Route path="/:sport/:country" Component={Country} />
-            <Route path="/:sport/:country/:league" Component={League} />
-            <Route path="/:sport/:country/:league/:match" Component={Game} />
-            <Route path="/match/:matchid" Component={Match} />
-          </Routes>
+          <div className='wrapper'>
+            <Banner className="mobile-banner" />
+            <Header />
+            <Routes>
+              <Route path="/" Component={Sport} />
+              <Route path="/:sport" Component={Sport} />
+              <Route path="/:sport/:country" Component={Country} />
+              <Route path="/:sport/:country/:league" Component={League} />
+              <Route path="/:sport/:country/:league/:match" Component={Game} />
+              <Route path="/match/:matchid" Component={Match} />
+            </Routes>
+          </div>
+          <Footer/>
         </BrowserRouter>
       </ScoreboardProvider>
     </AppContextProvider>
