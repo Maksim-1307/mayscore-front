@@ -11,10 +11,20 @@ function Scoreboard(props) {
 
     const data = props.data;
     const { filter, setFilter } = useScoreboard();
-    console.log(data);
+    //console.log(data);
+
+    function is_today(timestamp){
+        if (!timestamp) return false;
+        let date = new Date(timestamp * 1000);
+        let today = new Date();
+        if (date.getDate() == today.getDate()) return true;
+        return false;
+    }
 
     function check_filter (match) {
         if (!match) return false;
+        if (!is_today(match.time)) return false;
+
         const status = match.status;
         switch (filter) {
             case "all": 
@@ -31,6 +41,8 @@ function Scoreboard(props) {
             case "completed":
                 if (status == 3) return true;
                 break;
+            default:
+                return false;
         }
     }
 
