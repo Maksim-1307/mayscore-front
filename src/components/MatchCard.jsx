@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { statusTranslations } from "../helpers/translations";
 
+import redcard from "../images/icons/red-card.png";
+
 function MatchCard(props) {
     const data = props.data;
 
@@ -41,6 +43,12 @@ function MatchCard(props) {
         </>);
     }
 
+    const redCard = (command) => {
+        if (command == "a" && data.commandA_redCard > 0) return (<img src={redcard} alt="" className="match-event__icon" />)
+        if (command == "b" && data.commandB_redCard > 0) return (<img src={redcard} alt="" className="match-event__icon" />)
+    }
+    redCard();
+
     return(
         <a class={classname()} href={"/match/" + props.data.id}>
             <div class="match__left">
@@ -50,11 +58,13 @@ function MatchCard(props) {
                         <img class="match-player__icon"
                             src={data.commandA_icon} />
                         <span>{data.commandA_name}</span>
+                        {redCard("a")}
                     </div>
                     <div class="match-player">
                         <img class="match-player__icon"
                             src={data.commandB_icon} />
                         <span>{data.commandB_name}</span>
+                        {redCard("b")}
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ function Scoreboard(props) {
 
     const data = props.data;
     const { filter, setFilter } = useScoreboard();
+    console.log(data);
 
     function check_filter (match) {
         if (!match) return false;
@@ -139,7 +140,8 @@ function Scoreboard(props) {
             "158_YacqHHdS": 5,
             "6_ClDjv3V5": 2,
             "6_xGrwqq16": 2,
-            "6_A9yxE9Ke": 0
+            "6_A9yxE9Ke": 0,
+            "81_W6BOzpK2": 0
         };
         const priorityCountries = ['Англия', 'Испания', 'Россия', 'Италия', 'Франция', 'Германия', 'Европа'];
         
@@ -147,7 +149,8 @@ function Scoreboard(props) {
             if (league && league.country && priorityCountries.includes(league.country)) return true;
             return false;
         }
-        function check_id(league) {
+        function check_id(league) { 
+            //if (league) console.log("league id is: ", league.id);
             if (league && league.id && priorityIDs[league.id] != undefined) return +priorityIDs[league.id];
             return -1;
         }

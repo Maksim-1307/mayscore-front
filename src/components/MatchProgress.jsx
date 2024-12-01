@@ -6,6 +6,7 @@ import redcard from '../images/icons/red-card.png';
 import substitution from '../images/icons/substitution.png';
 import ballIcon from '../images/icons/ball.png';
 import ballIconRed from '../images/icons/red-ball.png';
+import warningIcon from '../images/icons/warning.png';
 
 function check_undefined(...props){
     if (!Array.isArray(props)) return false;
@@ -83,7 +84,7 @@ const Penalty = (data) => {
     const score = [data["INX_0"], data["IOX_0"]];
     const name = data["IF_0"];
     const command = data["IA_0"];
-    const status = data["IK_0"];
+    const status = data["IK_1"];
 
     if (!check_undefined(time, score, name, command)) return;
 
@@ -97,14 +98,24 @@ const Penalty = (data) => {
         return;
     }
 
+    const getScore = () => {
+        if (status == "Незабитый пенальти") return;
+        return (<>{score[0]} - {score[1]}</>)
+    }
+
+    const getIcon = () => {
+        if(status == "Незабитый пенальти") return warningIcon;
+        return ballIcon;
+    }
+
     return (
         <div className={getClass()}>
             <div className="match-event__time">
                 {time}
             </div>
             <div className="match-event__score">
-                <img className="match-event__goal" src={ballIcon} alt="" />
-                {score[0]} - {score[1]}
+                <img className="match-event__goal" src={getIcon()} alt="" />
+                {getScore()}
             </div>
             <div className="match-event__name-major">{name}</div>
             <div className="match-event__name-minor">{getStatus()}</div>

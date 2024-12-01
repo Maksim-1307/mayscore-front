@@ -18,7 +18,8 @@ function Leagueslist (props) {
             "155_UmMRoGzp": 0,
             "158_YacqHHdS": 5,
             "6_ClDjv3V5": 2,
-            "6_xGrwqq16": 2
+            "6_xGrwqq16": 2,
+            "81_W6BOzpK2": 0
         };
         const priorityCountries = ['Англия', 'Испания', 'Россия', 'Италия', 'Франция', 'Германия', 'Европа'];
 
