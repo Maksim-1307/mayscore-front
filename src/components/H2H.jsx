@@ -97,9 +97,6 @@ function H2H () {
                 const year = dateObj.getFullYear() % 100;
                 const month = dateObj.getMonth() + 1; 
                 const day = dateObj.getDate();
-                //return dateObj.toString();
-                //console.log((+elemdata['KC'] * 1000) + " is " + dateObj.toString());
-                //return dateObj.toString();
                 return [day, month, year].join('.');
             }
 
@@ -171,10 +168,6 @@ function H2H () {
         return elements;
     }
 
-
-    useEffect(()=>{
-        console.log(showMoreState)
-    }, [showMoreState]);
 
     useEffect(() => {
         const time = 60000;

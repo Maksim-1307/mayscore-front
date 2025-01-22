@@ -10,20 +10,22 @@ import DateInput from "./DateInput.jsx";
 function Scoreboard(props) {
 
     const data = props.data;
-    const { filter, setFilter } = useScoreboard();
-    //console.log(data);
+    const { filter, setFilter, date } = useScoreboard();
+    const dayBias = date; // 0 is today, -1 is yesterday ...
 
-    function is_today(timestamp){
+    // checks if timestamp refers to the selected day
+    function is_that_day(timestamp){
         if (!timestamp) return false;
         let date = new Date(timestamp * 1000);
         let today = new Date();
-        if (date.getDate() == today.getDate()) return true;
+        if (date.getDate() == today.getDate() + dayBias) return true;
         return false;
     }
 
     function check_filter (match) {
+
         if (!match) return false;
-        if (!is_today(match.time)) return false;
+        if (!is_that_day(match.time)) return false;
 
         const status = match.status;
         switch (filter) {
@@ -162,7 +164,6 @@ function Scoreboard(props) {
             return false;
         }
         function check_id(league) { 
-            //if (league) console.log("league id is: ", league.id);
             if (league && league.id && priorityIDs[league.id] != undefined) return +priorityIDs[league.id];
             return -1;
         }

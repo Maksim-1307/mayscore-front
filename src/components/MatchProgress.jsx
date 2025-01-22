@@ -229,10 +229,6 @@ function MatchProgress () {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    useEffect(()=>{
-        console.log(data);
-    },[data]);
-
     useEffect(() => {
         const time = 30000;
         const urlData = {

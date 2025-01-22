@@ -72,7 +72,6 @@ function Footer () {
         }
 
         fetchData();
-        console.log(htmlData);
     }
 
     useEffect(() => {
@@ -80,15 +79,6 @@ function Footer () {
         getNextMatchesOfLeague(topLeague);
 
     }, []);
-
-    useEffect(()=>{
-        console.log("its russia premier league data: ", nextMatches); 
-    }, [nextMatches]);
-    /*
-    
-    привет.можно еще чтоб вот здесь тоже были лиги что и на странице вверху главные самые. россия англия италия испания франция  германия лига чемпионов лига европы
-
-    */
 
     return (
         <footer className="footer">

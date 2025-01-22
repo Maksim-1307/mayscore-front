@@ -35,15 +35,12 @@ function Leagueslist (props) {
             //if (!(a && b)) return 0;
             const leagueA = a[0];
             const leagueB = b[0];
-            // console.log("league A", leagueA);
-            // console.log("league B", leagueB);
             if (check_id(leagueA) > check_id(leagueB)) return -1;
             if (check_id(leagueA) < check_id(leagueB)) return 1;
             if (check_country(leagueA)) return -1;
             if (check_country(leagueB)) return 1;
             return 0;
         });
-        console.log(dataArray);
         return dataArray;
     }
 
