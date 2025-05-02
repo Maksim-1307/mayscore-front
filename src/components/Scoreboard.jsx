@@ -13,12 +13,16 @@ function Scoreboard(props) {
     const { filter, setFilter, date } = useScoreboard();
     const dayBias = date; // 0 is today, -1 is yesterday ...
 
+    // console.log(data)
+
     // checks if timestamp refers to the selected day
     function is_that_day(timestamp){
         if (!timestamp) return false;
         let date = new Date(timestamp * 1000);
         let today = new Date();
-        if (date.getDate() == today.getDate() + dayBias) return true;
+        today.setDate(today.getDate() + dayBias);
+        if (date.getDate() == today.getDate()) return true;
+        console.log(today.getDate())
         return false;
     }
 
