@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState, useEffect, useReducer } from "react";
 import Breadcrumbs from "./Breadcrumbs";
 import Helmet from "./Helmet";
+import Banner from "./Banner";
 
 
 function League(props) {
@@ -71,6 +72,8 @@ function League(props) {
             <div className='container'>
                 <Sidebar data={data}/>
                 <div className="content">
+                    <Banner />
+                    <br />
                     <div class="ui-block league-ui-block">
                         <div class="league">
                             <div class="league__top">

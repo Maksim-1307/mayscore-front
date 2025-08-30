@@ -11,6 +11,7 @@ import MatchTable from "./MatchTable";
 import H2H from "./H2H";
 import Helmet from "./Helmet";
 import { renderToReadableStream } from "react-dom/server";
+import Banner from "./Banner";
 
 function Match(){
 
@@ -166,6 +167,8 @@ function Match(){
         {helmet()}
         <div className='container'>
             <div className="content">
+                <Banner />
+                <br />
                 <div class="ui-block game-ui-block">
                     <div class="game">
                         <div class="game__top">
