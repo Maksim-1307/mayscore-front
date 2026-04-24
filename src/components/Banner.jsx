@@ -14,7 +14,7 @@ function Banner ({className}) {
     }
     return (
         <div ref={bannerRef} className={`${className ? className : ''} banner`}>
-            <a href="https://clicks.af-ru2e2e.com/click?offer_id=316&partner_id=3257&landing_id=3990&utm_medium=affiliate&web_master_id={web_master_id}&partner_click_id={partner_click_id}" >
+            <a href="https://refpa27918.com/L?tag=s_5489662m_355c_&site=5489662&ad=355" >
                 <img src={banner} alt="" />
             </a>
             <button className='banner__close-button' onClick={() => closeSelf()}>
