@@ -3,6 +3,8 @@ import League from "./League";
 import { useEffect, useState } from "react";
 import ResponseDecoder from "../helpers/ResponseDecoder";
 import { sportsTranslations } from "../helpers/translations";
+import config from "../config";
+import { joinUrl } from "../helpers/joinUrl";
 
 function Footer () {
 
@@ -47,10 +49,11 @@ function Footer () {
 
         let htmlData = document.createElement('div');
 
-        const url = `https://www.flashscorekz.com/${leagueData.sport}/${leagueData.country}/${leagueData.league}/fixtures/`;
+        const targetUrl = `https://www.flashscorekz.com/${leagueData.sport}/${leagueData.country}/${leagueData.league}/fixtures/`;
+        const proxyUrl = joinUrl(config.API_URL, '/proxy.php?url=' + encodeURIComponent(targetUrl));
 
         function fetchData() {
-            fetch(url)
+            fetch(proxyUrl)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Не удалось получтить рассписание матчей ' + response.status);

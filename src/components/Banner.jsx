@@ -3,10 +3,14 @@ import cross from '../images/icons/cross.svg';
 
 import React, { useEffect, useRef } from 'react';
 
+import config from '../config';
+
 const BANNER_URL = 'https://mayscor.ru/admin/get_banners.php';
 const BANNER_BASE_URL = 'https://mayscor.ru/admin/';
 
 function Banner ({className}) {
+
+    const { IS_DEV } = config;
 
     const bannerRef = useRef(null);
 
@@ -32,7 +36,7 @@ function Banner ({className}) {
                 setIsLoading(false);
             }
         };
-
+        if (IS_DEV) return;
         fetchBanner();
     }, []);
 
@@ -42,7 +46,7 @@ function Banner ({className}) {
         }
     }
 
-    if (bannerImageUrl && bannerLink) {
+    if (bannerImageUrl && bannerLink && !IS_DEV) {
         return (
             <div ref={bannerRef} className={`${className ? className : ''} banner`}>
                 <a href={bannerLink} >

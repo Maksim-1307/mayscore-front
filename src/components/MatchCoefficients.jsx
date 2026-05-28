@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import arrowGreen from '../images/icons/arrow-green.svg';
 import arrowRed from '../images/icons/arrow-red.svg';
 
+import config from "../config";
+import { joinUrl } from "../helpers/joinUrl";
+
 function MatchCoefficients(){
 
     const [data, setData] = useState(null);
@@ -13,12 +16,15 @@ function MatchCoefficients(){
 
     useEffect(() => {
         const time = 600000;
-        const url = `https://46.ds.lsapp.eu/pq_graphql?_hash=oce&eventId=${matchid}&projectId=46&geoIpCode=RU&geoIpSubdivisionCode=RUTA`;
+        const targetUrl = `https://global.ds.lsapp.eu/odds/pq_graphql?_hash=oce&eventId=${matchid}&projectId=46&geoIpCode=RU&geoIpSubdivisionCode=RUTA`;
+        // https://global.ds.lsapp.eu/odds/pq_graphql?_hash=oce&eventId=IcJBYh6e&projectId=32&geoIpCode=NL&geoIpSubdivisionCode=NLNH
+
+        const proxyUrl = joinUrl(config.API_URL, '/proxy.php?url=' + encodeURIComponent(targetUrl));
 
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(url, {
+                const response = await fetch(targetUrl, {
                     method: 'GET'
                 });
                 const textData = await response.text();

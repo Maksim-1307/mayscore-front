@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import config from "../config";
+import { joinUrl } from "../helpers/joinUrl";
 
 function H2H () {
 
@@ -171,14 +173,15 @@ function H2H () {
 
     useEffect(() => {
         const time = 60000;
-        const url = `https://local-ruua.flashscore.ninja/46/x/feed/df_hh_1_${matchid}`;
+        const targetUrl = `https://local-ruua.flashscore.ninja/46/x/feed/df_hh_1_${matchid}`;
+        const proxyUrl = joinUrl(config.API_URL, '/proxy.php?url=' + encodeURIComponent(targetUrl));
 
         if (!matchid) return;
 
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(url, {
+                const response = await fetch(proxyUrl, {
                     method: 'GET',
                     headers: {
                         'X-Fsign': 'SW9D1eZo'

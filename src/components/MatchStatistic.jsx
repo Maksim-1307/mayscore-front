@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import config from "../config";
+import { joinUrl } from "../helpers/joinUrl";
 
 function MatchStat(data){
     data = data.data;
@@ -81,12 +83,13 @@ function MatchStatistic(){
 
     useEffect(() => {
         const time = 60000;
-        const url = 'https://local-ruua.flashscore.ninja/46/x/feed/df_st_1_' + matchid;
+        const targetUrl = 'https://local-ruua.flashscore.ninja/46/x/feed/df_st_1_' + matchid;
+        const proxyUrl = joinUrl(config.API_URL, '/proxy.php?url=' + encodeURIComponent(targetUrl));
 
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(url, {
+                const response = await fetch(proxyUrl, {
                     method: 'GET',
                     headers: {
                         'X-Fsign': 'SW9D1eZo'
@@ -109,6 +112,8 @@ function MatchStatistic(){
         return () => clearInterval(intervalId);
 
     }, []);
+
+    useEffect(() => console.log('Match statistic data:', data), [data]);
 
     if (!matchid) return;
     if (!data) return;

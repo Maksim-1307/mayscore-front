@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import arrowIcon from "../images/icons/arrow.png";
+import config from "../config";
+import { joinUrl } from "../helpers/joinUrl";
 
 function MatchTable () {
 
@@ -26,12 +28,13 @@ function MatchTable () {
 
     useEffect(() => {
         const time = 60000;
-        const url = `https://local-ruua.flashscore.ninja/46/x/feed/df_to_1_${matchid}_${tab}`;
+        const targetUrl = `https://local-ruua.flashscore.ninja/46/x/feed/df_to_1_${matchid}_${tab}`;
+        const proxyUrl = joinUrl(config.API_URL, '/proxy.php?url=' + encodeURIComponent(targetUrl));
 
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(url, {
+                const response = await fetch(proxyUrl, {
                     method: 'GET',
                     headers: {
                         'X-Fsign': 'SW9D1eZo'
