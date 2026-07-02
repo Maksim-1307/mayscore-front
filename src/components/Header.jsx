@@ -7,6 +7,7 @@ import volleyballIcon from "../images/icons/voleyball.png";
 import tennisIcon from "../images/icons/tennis.png";
 import esportsIcon from "../images/icons/cybersport.png";
 import MenuButton from "./MenuButton";
+import ContactButton from "./ContactButton";
 
 function Header() {
 
@@ -57,6 +58,7 @@ function Header() {
                 <div className="header__bottom">
                     <div className="nav-list header__nav-list">
                         {navListElemens()}
+                        <ContactButton />
                     </div>
                 </div>
             </div>
